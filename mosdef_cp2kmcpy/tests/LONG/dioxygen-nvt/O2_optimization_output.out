@@ -1,0 +1,90 @@
+ DBCSR| Multiplication driver                                               BLAS
+ DBCSR| Multrec recursion limit                                              512
+ DBCSR| Multiplication stack size                                           1000
+ DBCSR| Maximum elements for images                                    UNLIMITED
+ DBCSR| Multiplicative factor virtual images                                   1
+ DBCSR| Multiplication size stacks                                             3
+ DBCSR| Number of 3D layers                                               SINGLE
+ DBCSR| Use MPI memory allocation                                              T
+ DBCSR| Use RMA algorithm                                                      F
+ DBCSR| Use Communication thread                                               T
+ DBCSR| Communication thread load                                             87
+
+
+  **** **** ******  **  PROGRAM STARTED AT               2020-09-14 18:56:51.878
+ ***** ** ***  *** **   PROGRAM STARTED ON                       LAPTOP-SAG0HDJD
+ **    ****   ******    PROGRAM STARTED BY                                    rs
+ ***** **    ** ** **   PROGRAM PROCESS ID                                  2970
+  **** **  *******  **  PROGRAM STARTED IN /mnt/c/Users/rstha/Documents/research
+                                           /workflow/cp2kmdpy/cp2kmdpy/tests/LON
+                                           G/dioxygen-nvt
+
+ CP2K| version string:                                          CP2K version 5.1
+ CP2K| source code revision number:                                    svn:18091
+ CP2K| cp2kflags: libint fftw3 libxc parallel mpi3 scalapack libderiv_max_am1=5 
+ CP2K|            libint_max_am=6
+ CP2K| is freely available from                            https://www.cp2k.org/
+ CP2K| Program compiled at                          Mon Jan 15 17:12:42 UTC 2018
+ CP2K| Program compiled on                                       lgw01-amd64-018
+ CP2K| Program compiled for                                Linux-x86_64-gfortran
+ CP2K| Data directory path                                       /usr/share/cp2k
+ CP2K| Input file name                                 O2_optimization_input.inp
+
+ GLOBAL| Force Environment number                                              1
+ GLOBAL| Basis set file name                                        BASIS_MOLOPT
+ GLOBAL| Potential file name                                      GTH_POTENTIALS
+ GLOBAL| MM Potential file name                                     MM_POTENTIAL
+ GLOBAL| Coordinate file name                                      __STD_INPUT__
+ GLOBAL| Method name                                                        CP2K
+ GLOBAL| Project name                                                     O2_opt
+ GLOBAL| Preferred FFT library                                             FFTW3
+ GLOBAL| Preferred diagonalization lib.                                       SL
+ GLOBAL| Run type                                                        GEO_OPT
+ GLOBAL| All-to-all communication in single precision                          F
+ GLOBAL| FFTs using library dependent lengths                                  F
+ GLOBAL| Global print level                                                  LOW
+ GLOBAL| Total number of message passing processes                             1
+ GLOBAL| Number of threads for this process                                    1
+ GLOBAL| This output is from process                                           0
+ GLOBAL| CPU model name :  Intel(R) Core(TM) i5-8250U CPU @ 1.60GHz
+
+ MEMORY| system memory details [Kb]
+ MEMORY|                        rank 0           min           max       average
+ MEMORY| MemTotal              8262884       8262884       8262884       8262884
+ MEMORY| MemFree               2470936       2470936       2470936       2470936
+ MEMORY| Buffers                 34032         34032         34032         34032
+ MEMORY| Cached                 188576        188576        188576        188576
+ MEMORY| Slab                    13868         13868         13868         13868
+ MEMORY| SReclaimable             6744          6744          6744          6744
+ MEMORY| MemLikelyFree         2700288       2700288       2700288       2700288
+
+
+ GENERATE|  Preliminary Number of Bonds generated:                             0
+ GENERATE|  Achieved consistency in connectivity generation.
+
+ *******************************************************************************
+ *******************************************************************************
+ **                                                                           **
+ **     #####                         ##              ##                      **
+ **    ##   ##            ##          ##              ##                      **
+ **   ##     ##                       ##            ######                    **
+ **   ##     ##  ##   ##  ##   #####  ##  ##   ####   ##    #####    #####    **
+ **   ##     ##  ##   ##  ##  ##      ## ##   ##      ##   ##   ##  ##   ##   **
+ **   ##  ## ##  ##   ##  ##  ##      ####     ###    ##   ######   ######    **
+ **    ##  ###   ##   ##  ##  ##      ## ##      ##   ##   ##       ##        **
+ **     #######   #####   ##   #####  ##  ##  ####    ##    #####   ##        **
+ **           ##                                                    ##        **
+ **                                                                           **
+ **                                                ... make the atoms dance   **
+ **                                                                           **
+ **            Copyright (C) by CP2K developers group (2000 - 2017)           **
+ **                                                                           **
+ *******************************************************************************
+
+
+ SCF PARAMETERS         Density guess:                                    ATOMIC
+                        --------------------------------------------------------
+                        max_scf:                                              30
+                        max_scf_history:                                       0
+                        max_diis:                                              4
+                        --------------------------------------------------------

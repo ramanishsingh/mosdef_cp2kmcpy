@@ -1,0 +1,248 @@
+SIM/GLOBAL/RUN_TYPE
+
+New: GEO_OPT
+Previous: None
+Date: 2020-09-14 18:56:51.768672
+Success: True
+ErrorMessage: None
+
+SIM/GLOBAL/PRINT_LEVEL
+
+New: LOW
+Previous: None
+Date: 2020-09-14 18:56:51.768688
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/METHOD
+
+New: QUICKSTEP
+Previous: None
+Date: 2020-09-14 18:56:51.768692
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/SUBSYS/DFT/ABC
+
+New: 30.0 30.0 30.0
+Previous: None
+Date: 2020-09-14 18:56:51.768720
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/SUBSYS/DFT/ALPHA_BETA_GAMMA
+
+New: 90.0 90.0 90.0
+Previous: None
+Date: 2020-09-14 18:56:51.768730
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/SUBSYS/DFT/PERIODIC
+
+New: NONE
+Previous: None
+Date: 2020-09-14 18:56:51.768739
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/SUBSYS/DFT/DEFAULT_KEYWORD
+
+New: O2_unoptimized_coord.xyz
+Previous: None
+Date: 2020-09-14 18:56:51.768746
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/SUBSYS/KIND/SECTION_PARAMETERS
+
+New: O
+Previous: None
+Date: 2020-09-14 18:56:51.768861
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/SUBSYS/KIND/BASIS_SET
+
+New: DZVP-MOLOPT-GTH
+Previous: None
+Date: 2020-09-14 18:56:51.768866
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/SUBSYS/KIND/POTENTIAL
+
+New: GTH-PBE
+Previous: None
+Date: 2020-09-14 18:56:51.768870
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/DFT/ABASIS_SET_FILE_NAME
+
+New: BASIS_MOLOPT
+Previous: None
+Date: 2020-09-14 18:56:51.768882
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/DFT/POTENTIAL_FILE_NAME
+
+New: GTH_POTENTIALS
+Previous: None
+Date: 2020-09-14 18:56:51.768892
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/DFT/ENERGY/EPS_DEFAULT
+
+New: 1e-07
+Previous: None
+Date: 2020-09-14 18:56:51.768896
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/DFT/MGRID/CUTOFF
+
+New: 600
+Previous: None
+Date: 2020-09-14 18:56:51.768903
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/DFT/MGRID/REL_CUTOFF
+
+New: 50
+Previous: None
+Date: 2020-09-14 18:56:51.768906
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/DFT/MGRID/NGRIDS
+
+New: 4
+Previous: None
+Date: 2020-09-14 18:56:51.768909
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/DFT/XC/XC_FUNCTIONAL/SECTION_PARAMETERS
+
+New: PBE
+Previous: None
+Date: 2020-09-14 18:56:51.768915
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/DFT/XC/VDW_POTENTIAL/POTENTIAL_TYPE
+
+New: PAIR_POTENTIAL
+Previous: None
+Date: 2020-09-14 18:56:51.768919
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/DFT/XC/VDW_POTENTIAL/PAIR_POTENTIAL/TYPE
+
+New: DFTD3
+Previous: None
+Date: 2020-09-14 18:56:51.768928
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/DFT/XC/VDW_POTENTIAL/PAIR_POTENTIAL/PARAMETER_FILE_NAME
+
+New: dftd3.dat
+Previous: None
+Date: 2020-09-14 18:56:51.768931
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/DFT/XC/VDW_POTENTIAL/PAIR_POTENTIAL/REFERENCE_FUNCTIONAL
+
+New: PBE
+Previous: None
+Date: 2020-09-14 18:56:51.768934
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/DFT/XC/VDW_POTENTIAL/PAIR_POTENTIAL/R_CUTOFF
+
+New: 8
+Previous: None
+Date: 2020-09-14 18:56:51.768937
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/DFT/SCF/SCF_GUESS
+
+New: ATOMIC
+Previous: None
+Date: 2020-09-14 18:56:51.768941
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/DFT/SCF/MAX_SCF
+
+New: 30
+Previous: None
+Date: 2020-09-14 18:56:51.768947
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/DFT/POISSON/PERIODIC
+
+New: NONE
+Previous: None
+Date: 2020-09-14 18:56:51.768961
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/DFT/POISSON/POISSON_SOLVER
+
+New: WAVELET
+Previous: None
+Date: 2020-09-14 18:56:51.768968
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/GEO_OPT/TYPE
+
+New: MINIMIZATION
+Previous: None
+Date: 2020-09-14 18:56:51.769023
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/GEO_OPT/MAX_DR
+
+New: BFGS
+Previous: None
+Date: 2020-09-14 18:56:51.769027
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/GEO_OPT/MAX_ITER
+
+New: 100
+Previous: None
+Date: 2020-09-14 18:56:51.769034
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/GEO_OPT/MAX_FORCE
+
+New: 0.001
+Previous: None
+Date: 2020-09-14 18:56:51.769038
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/CONSTRAINT/FIXED_ATOMS/LIST
+
+New: 1
+Previous: None
+Date: 2020-09-14 18:56:51.769047
+Success: True
+ErrorMessage: None
+

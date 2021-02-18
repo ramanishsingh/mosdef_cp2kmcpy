@@ -1,0 +1,10 @@
+#!/bin/bash -l        
+#PBS -l walltime=01:00:00,nodes=1:ppn=16,mem=40gb 
+#PBS -o out.txt
+#PBS -e error.txt
+#PBS -N twentyO2
+cd /panfs/roc/scratch/singh891/delete/cp2kmdpy/cp2kmdpy/tests/LONG/with-signac/dioxygen-nvt/workspace/2c1152d36804631fcd7a25630756cc2b
+module load intel 
+module load fftw
+module load mkl
+mpirun -np 16 cp2k.popt -i twentyO2molecules_md_input.inp -o direct_submission_16.out

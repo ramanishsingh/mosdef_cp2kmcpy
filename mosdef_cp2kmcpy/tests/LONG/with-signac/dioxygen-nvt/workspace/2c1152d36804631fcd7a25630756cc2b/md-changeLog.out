@@ -1,0 +1,496 @@
+SIM/GLOBAL/RUN_TYPE
+
+New: MD
+Previous: None
+Date: 2020-09-14 16:23:45.366348
+Success: True
+ErrorMessage: None
+
+SIM/GLOBAL/PRINT_LEVEL
+
+New: LOW
+Previous: None
+Date: 2020-09-14 16:23:45.366375
+Success: True
+ErrorMessage: None
+
+SIM/GLOBAL/SEED
+
+New: 1
+Previous: None
+Date: 2020-09-14 16:23:45.366391
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/METHOD
+
+New: QUICKSTEP
+Previous: None
+Date: 2020-09-14 16:23:45.366400
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/STRESS_TENSOR
+
+New: ANALYTICAL
+Previous: QUICKSTEP
+Date: 2020-09-14 16:23:45.366407
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/DFT/ABASIS_SET_FILE_NAME
+
+New: BASIS_MOLOPT
+Previous: None
+Date: 2020-09-14 16:23:45.366414
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/DFT/POTENTIAL_FILE_NAME
+
+New: GTH_POTENTIALS
+Previous: None
+Date: 2020-09-14 16:23:45.366423
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/DFT/CHARGE
+
+New: 0
+Previous: None
+Date: 2020-09-14 16:23:45.366432
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/DFT/MULTIPLICITY
+
+New: 1
+Previous: None
+Date: 2020-09-14 16:23:45.366438
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/DFT/MGRID/CUTOFF
+
+New: 600
+Previous: None
+Date: 2020-09-14 16:23:45.366446
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/DFT/MGRID/REL_CUTOFF
+
+New: 50
+Previous: None
+Date: 2020-09-14 16:23:45.366452
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/DFT/MGRID/NGRIDS
+
+New: 4
+Previous: None
+Date: 2020-09-14 16:23:45.366460
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/DFT/ENERGY/METHOD
+
+New: GPW
+Previous: None
+Date: 2020-09-14 16:23:45.366471
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/DFT/ENERGY/EPS_DEFAULT
+
+New: 1e-07
+Previous: None
+Date: 2020-09-14 16:23:45.366483
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/DFT/ENERGY/EXTRAPOLATION
+
+New: ASPC
+Previous: None
+Date: 2020-09-14 16:23:45.366496
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/DFT/POISSON/PERIODIC
+
+New: XYZ
+Previous: None
+Date: 2020-09-14 16:23:45.366513
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/DFT/PRINT/PRINT/SECTION_PARAMETERS
+
+New: OFF
+Previous: None
+Date: 2020-09-14 16:23:45.366535
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/DFT/SCF/SCF_GUESS
+
+New: ATOMIC
+Previous: None
+Date: 2020-09-14 16:23:45.366559
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/DFT/SCF/MAX_SCF
+
+New: 30
+Previous: None
+Date: 2020-09-14 16:23:45.366569
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/DFT/SCF/OT/SECTION_PARAMETERS
+
+New: .TRUE.
+Previous: None
+Date: 2020-09-14 16:23:45.366595
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/DFT/SCF/OT/PRECONDITIONER
+
+New: FULL_SINGLE_INVERSE
+Previous: None
+Date: 2020-09-14 16:23:45.366612
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/DFT/SCF/OT/MINIMIZER
+
+New: DIIS
+Previous: None
+Date: 2020-09-14 16:23:45.366624
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/DFT/SCF/OUTER_SCF/SECTION_PARAMETERS
+
+New: .TRUE.
+Previous: None
+Date: 2020-09-14 16:23:45.366635
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/DFT/SCF/OUTER_SCF/MAX_SCF
+
+New: 10
+Previous: None
+Date: 2020-09-14 16:23:45.366644
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/DFT/SCF/OUTER_SCF/EPS_SCF
+
+New: 1e-06
+Previous: 1e-06
+Date: 2020-09-14 16:23:45.366649
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/DFT/SCF/SCF_PRINT/FORCES/SECTION_PARAMETERS
+
+New: OFF
+Previous: None
+Date: 2020-09-14 16:23:45.366659
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/DFT/SCF/SCF_PRINT/DM_RESTART_WRITE
+
+New: .TRUE.
+Previous: None
+Date: 2020-09-14 16:23:45.366666
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/DFT/XC/XC_FUNCTIONAL/SECTION_PARAMETERS
+
+New: PBE
+Previous: None
+Date: 2020-09-14 16:23:45.366676
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/DFT/XC/VDW_POTENTIAL/POTENTIAL_TYPE
+
+New: PAIR_POTENTIAL
+Previous: None
+Date: 2020-09-14 16:23:45.366684
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/DFT/XC/VDW_POTENTIAL/PAIR_POTENTIAL/TYPE
+
+New: DFTD3
+Previous: None
+Date: 2020-09-14 16:23:45.366691
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/DFT/XC/VDW_POTENTIAL/PAIR_POTENTIAL/PARAMETER_FILE_NAME
+
+New: dftd3.dat
+Previous: None
+Date: 2020-09-14 16:23:45.366697
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/DFT/XC/VDW_POTENTIAL/PAIR_POTENTIAL/REFERENCE_FUNCTIONAL
+
+New: PBE
+Previous: None
+Date: 2020-09-14 16:23:45.366702
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/DFT/XC/VDW_POTENTIAL/PAIR_POTENTIAL/R_CUTOFF
+
+New: 8
+Previous: None
+Date: 2020-09-14 16:23:45.366707
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/SUBSYS/DFT/DEFAULT_KEYWORD
+
+New: twentyO2molecules.xyz
+Previous: None
+Date: 2020-09-14 16:23:45.366723
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/SUBSYS/KIND/SECTION_PARAMETERS
+
+New: O
+Previous: None
+Date: 2020-09-14 16:23:45.366894
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/SUBSYS/KIND/BASIS_SET
+
+New: DZVP-MOLOPT-GTH
+Previous: None
+Date: 2020-09-14 16:23:45.366905
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/SUBSYS/KIND/POTENTIAL
+
+New: GTH-PBE
+Previous: None
+Date: 2020-09-14 16:23:45.366913
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/SUBSYS/DFT/ABC
+
+New: 10.0 10.0 10.0
+Previous: None
+Date: 2020-09-14 16:23:45.367105
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/SUBSYS/DFT/ALPHA_BETA_GAMMA
+
+New: 90.0 90.0 90.0
+Previous: None
+Date: 2020-09-14 16:23:45.367116
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/GEO_OPT/MAX_DR
+
+New: BFGS
+Previous: None
+Date: 2020-09-14 16:23:45.367125
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/GEO_OPT/MAX_ITER
+
+New: 100
+Previous: None
+Date: 2020-09-14 16:23:45.367135
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/GEO_OPT/MAX_FORCE
+
+New: 0.003
+Previous: None
+Date: 2020-09-14 16:23:45.367141
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/MD/ENSEMBLE
+
+New: NVT
+Previous: None
+Date: 2020-09-14 16:23:45.367151
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/MD/STEPS
+
+New: 999
+Previous: None
+Date: 2020-09-14 16:23:45.367162
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/MD/TIMESTEP
+
+New: 1.0
+Previous: None
+Date: 2020-09-14 16:23:45.367178
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/MD/TEMPERATURE
+
+New: 298.0
+Previous: None
+Date: 2020-09-14 16:23:45.367197
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/MD/THERMOSTAT/TYPE
+
+New: None
+Previous: None
+Date: 2020-09-14 16:23:45.367204
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/MD/THERMOSTAT/REGION
+
+New: MASSIVE
+Previous: None
+Date: 2020-09-14 16:23:45.367212
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/MD/THERMOSTAT/NOSE/LENGTH
+
+New: 5
+Previous: None
+Date: 2020-09-14 16:23:45.367219
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/MD/THERMOSTAT/NOSE/YOSHIDA
+
+New: 3
+Previous: None
+Date: 2020-09-14 16:23:45.367225
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/MD/THERMOSTAT/NOSE/TIMECON
+
+New: 1000.0
+Previous: None
+Date: 2020-09-14 16:23:45.367234
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/MD/THERMOSTAT/NOSE/MTS
+
+New: 2
+Previous: None
+Date: 2020-09-14 16:23:45.367239
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/PRINT/STRESS/SECTION_PARAMETERS
+
+New: OFF
+Previous: None
+Date: 2020-09-14 16:23:45.367275
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/PRINT/TRAJECTORY/EACH/MD
+
+New: 10
+Previous: None
+Date: 2020-09-14 16:23:45.367286
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/PRINT/TRAJECTORY/FORMAT
+
+New: PDB
+Previous: None
+Date: 2020-09-14 16:23:45.367293
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/PRINT/VELOCITIES/SECTION_PARAMETERS
+
+New: OFF
+Previous: None
+Date: 2020-09-14 16:23:45.367300
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/PRINT/FORCES/SECTION_PARAMETERS
+
+New: OFF
+Previous: None
+Date: 2020-09-14 16:23:45.367307
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/PRINT/FORCES/SECTION_PARAMETERS
+
+New: ON
+Previous: None
+Date: 2020-09-14 16:23:45.367326
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/PRINT/FORCES/EACH/MD
+
+New: 500
+Previous: None
+Date: 2020-09-14 16:23:45.367336
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/PRINT/FORCES/SECTION_PARAMETERS
+
+New: ON
+Previous: None
+Date: 2020-09-14 16:23:45.367342
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/PRINT/FORCES/BACKUP_COPIES
+
+New: 3
+Previous: None
+Date: 2020-09-14 16:23:45.367347
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/PRINT/FORCES/EACH/MD
+
+New: 1
+Previous: None
+Date: 2020-09-14 16:23:45.367353
+Success: True
+ErrorMessage: None
+

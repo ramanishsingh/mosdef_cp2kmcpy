@@ -1,0 +1,157 @@
+&GLOBAL
+  RUN_TYPE     MD
+  PROJECT      N2_npt
+  PRINT_LEVEL  LOW
+  SEED  1
+&END GLOBAL
+&MOTION
+  &MD
+    ENSEMBLE        NPT_I
+    TIMESTEP        1.0
+    STEPS           10
+    TEMPERATURE     273.15
+    &THERMOSTAT       
+      TYPE            NOSE 
+      REGION          MASSIVE 
+      &NOSE             
+        LENGTH       5
+        MTS          2
+        TIMECON      1000.0
+        YOSHIDA      3
+      &END NOSE             
+    &END THERMOSTAT       
+    &BAROSTAT       
+      PRESSURE            1.0 
+    &END BAROSTAT       
+    &AVERAGES       
+    &END AVERAGES       
+    &PRINT       
+      &ENERGY       
+        &EACH       
+        &END EACH       
+      &END ENERGY       
+      &PROGRAM_RUN_INFO       
+        &EACH       
+        &END EACH       
+      &END PROGRAM_RUN_INFO     
+    &END PRINT       
+  &END MD
+ 
+  &CONSTRAINT
+    &FIXED_ATOMS      
+    &END FIXED_ATOMS       
+  &END CONSTRAINT
+ 
+  &PRINT 
+    &FORCES        OFF
+      &EACH       
+      &END EACH       
+    &END FORCES        
+    &RESTART_HISTORY        ON
+      &EACH       
+        MD              500             
+      &END EACH       
+    &END RESTART_HISTORY        
+    &RESTART        ON
+      BACKUP_COPIES        3
+      &EACH       
+        MD              1             
+      &END EACH       
+    &END RESTART        
+    &TRAJECTORY       LOW
+      FORMAT        PDB
+      &EACH       
+        MD              10             
+      &END EACH       
+    &END TRAJECTORY       
+    &STRESS       OFF
+      &EACH       
+      &END EACH       
+    &END STRESS       
+    &VELOCITIES       OFF
+      &EACH       
+      &END EACH       
+    &END VELOCITIES       
+  &END PRINT 
+  &GEO_OPT 
+    MAX_DR        0.003
+    MAX_FORCE        0.003
+    MAX_ITER        100
+    OPTIMIZER        BFGS
+  &END GEO_OPT 
+&END MOTION 
+&FORCE_EVAL
+  METHOD        QUICKSTEP
+  STRESS_TENSOR        ANALYTICAL
+  &DFT        
+    BASIS_SET_FILE_NAME        BASIS_MOLOPT
+    CHARGE        0
+    MULTIPLICITY        1
+    POTENTIAL_FILE_NAME        GTH_POTENTIALS
+    &MGRID        
+      CUTOFF      200
+      NGRIDS      4
+      REL_CUTOFF      50
+    &END MGRID        
+    &QS        
+      EPS_DEFAULT       0.0001
+      EXTRAPOLATION       ASPC
+      METHOD       GPW
+    &END QS        
+    &POISSON        
+      PERIODIC       XYZ
+      &EWALD        
+      &END EWALD        
+    &END POISSON        
+    &PRINT         
+      &E_DENSITY_CUBE       OFF
+      &END E_DENSITY_CUBE       
+    &END PRINT        
+    &SCF        
+      EPS_SCF       1e-06
+      MAX_SCF       2
+      SCF_GUESS       ATOMIC
+      &OT       .TRUE. 
+        MINIMIZER       DIIS
+        PRECONDITIONER       FULL_SINGLE_INVERSE
+      &END OT        
+      &OUTER_SCF       .TRUE. 
+        EPS_SCF       0.0001
+        MAX_SCF       1
+      &END OUTER_SCF        
+      &PRINT        
+        DM_RESTART_WRITE       .TRUE.
+        &RESTART       OFF
+      &END RESTART   
+      &END PRINT       
+    &END SCF        
+    &XC        
+      &XC_FUNCTIONAL       PBE 
+      &END XC_FUNCTIONAL     
+      &VDW_POTENTIAL        
+        POTENTIAL_TYPE       PAIR_POTENTIAL
+        &PAIR_POTENTIAL        
+          PARAMETER_FILE_NAME       dftd3.dat
+          REFERENCE_FUNCTIONAL       PBE
+          R_CUTOFF       8
+          TYPE       DFTD3
+        &END PAIR_POTENTIAL        
+      &END VDW_POTENTIAL        
+    &END XC        
+  &END DFT        
+  &SUBSYS        
+    &CELL        
+      ABC       10.0 10.0 10.0
+      ALPHA_BETA_GAMMA       90.0 90.0 90.0
+    &END CELL        
+    &COORD        
+      @INCLUDE       N2_npt.xyz
+    &END COORD        
+    &KIND      N
+      BASIS_SET       DZVP-MOLOPT-GTH
+      POTENTIAL       GTH-PBE
+    &END KIND        
+    &TOPOLOGY        
+    &END TOPOLOGY       
+  &END SUBSYS        
+&END FORCE_EVAL        
