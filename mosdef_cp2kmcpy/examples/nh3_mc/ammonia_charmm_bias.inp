@@ -1,0 +1,51 @@
+*  ammonia_bias - created by mBuild using the on 2021-02-18 12:06:04.964529
+*  parameters from the {'NH3': 'ammonia_ff.xml'} force field(s) via MoSDef
+*  1-4 coulombic scaling = {'NH3': 0.0}, and 1-4 LJ scaling = {'NH3': 0.0}
+
+*  4 atoms
+*  3 bonds
+*  3 angles
+*  0 dihedrals
+*  0 impropers
+
+*  2 atom types
+*  1 bond types
+*  1 angle types
+
+
+*  Masses
+
+! atom_types 	mass 		  atomTypeForceFieldName_ResidueName (i.e., atoms_type_per_utilized_FF)  
+*  N		14.006720	! N_NH3
+*  H		1.007947	! H_NH3
+
+BONDS * harmonic
+!
+!V(bond) = Kb(b - b0)**2
+!
+!Kb: kcal/mole/A**2
+!b0: A
+!Kb (kcal/mol) = Kb_K (K) * Boltz. const.; (9999999999 if no stretching)
+!
+!atom_types 	 Kb	b0 		  atoms_types_per_utilized_FF
+N	H	418.858	1.008		! H_NH3	N_NH3
+
+ANGLES * harmonic
+!
+!V(angle) = Ktheta(Theta - Theta0)**2
+!
+!Ktheta: kcal/mole/rad**2
+!Theta0: degrees
+!
+! Ktheta (kcal/mol) = Ktheta_K (K) * Boltz. const.		
+!
+!atom_types 		Ktheta	Theta0			  atoms_types_per_utilized_FF
+H	N	H	44.149	92.70500		! H_NH3	N_NH3	H_NH3
+
+NONBONDED
+!
+!V(Lennard-Jones) = Eps,i,j[(Rmin,i,j/ri,j)**12 - 2(Rmin,i,j/ri,j)**6]
+!
+!atype 	ignored	epsilon 	Rmin/2 		ignored	eps,1-4		Rmin/2,1-4		  atom_type_per_utilized_FF
+N	0.00	-0.072876281	1.85054705595	0.00	-0.000000000	0.00000000000		! N_NH3	N_NH3
+H	0.00	-0.071701721	1.40307756039	0.00	-0.000000000	0.00000000000		! H_NH3	H_NH3

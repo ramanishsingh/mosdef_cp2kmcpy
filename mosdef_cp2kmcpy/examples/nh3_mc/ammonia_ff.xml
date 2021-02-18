@@ -1,0 +1,22 @@
+<ForceField>
+    <AtomTypes>
+        <Type name="N" def="[N;X3](H)(H)(H)"
+              class="NH3" element="N" mass=" 14.0067" desc="N in NH3"
+              doi="random" />
+        <Type name="H" def="[H;X1](N)"
+              class="NH3" element="H" mass=" 1.008" desc="H in NH3"
+              doi="random" />
+    </AtomTypes>
+    <HarmonicBondForce>
+        <Bond class1="NH3" class2="NH3" length="0.1008" k="350500"/>
+    </HarmonicBondForce>
+    <HarmonicAngleForce>
+	<Angle class1="NH3" class2="NH3" class3="NH3" angle="1.618" k="369.44"/>
+    </HarmonicAngleForce>
+    <RBTorsionForce>
+    </RBTorsionForce>
+    <NonbondedForce coulomb14scale="0" lj14scale="0">
+        <Atom type="N" charge="-0.2376" sigma="0.32973" epsilon="0.30491436"/>
+	<Atom type="H" charge="0.0792" sigma="0.25" epsilon="0.3"/>
+    </NonbondedForce>
+</ForceField>
