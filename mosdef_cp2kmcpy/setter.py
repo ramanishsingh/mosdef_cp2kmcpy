@@ -1,11 +1,11 @@
-
 import mbuild as mb
 import subprocess
 from mosdef_cp2k_writer.classes import SIM as sim
 import ele
-from utilities import potential_setter
-from utilities import set_basis_set
-from utilities import check_ensemble
+import numpy as np
+from mosdef_cp2kmcpy.utilities import potential_setter
+from mosdef_cp2kmcpy.utilities import set_basis_set
+from mosdef_cp2kmcpy.utilities import check_ensemble
 
 
 
@@ -17,6 +17,7 @@ def mc_files(instance):
     box_list=instance.box_list
     initial_coordinate_filename=instance.initial_coordinate_filename
     use_atom_name_as_symbol=instance.use_atom_name_as_symbol
+    cutoff = instance.cutoff
     scf_tolerance=instance.scf_tolerance
     basis_set_filename=instance.basis_set_filename
     basis_set=instance.basis_set
@@ -54,7 +55,7 @@ def mc_files(instance):
             box= box_list[box_number]
 
             filled_box=mb.packing.fill_box(
-                compound=molecules_list, n_compounds=n_molecules_each_box[box_number], box=box
+                compound=molecule_list, n_compounds=n_molecules_each_box[box_number], box=box
             )
             box_file_name = project_name +"_box{}_".format(box_number+1)+"initial"+ ".xyz"
             initial_coordinate_filename.append(box_file_name)
@@ -75,7 +76,7 @@ def mc_files(instance):
             with open(box_file_name, "w") as fout:
                 fout.writelines(data[2:])  # deleting first two lines
     print("MC initial structure saved as {}".format(initial_coordinate_filename))
- 
+
     atom_list = []
     mass_list = []
     symbol_list = []
@@ -96,7 +97,7 @@ def mc_files(instance):
                     ele.element_from_symbol("{}".format(particle.element)).mass
                 )
 
-   
+
     unique_atom_list, indices = np.unique(atom_list, return_index=True)
     unique_atom_list = list(unique_atom_list)
 
@@ -175,7 +176,7 @@ def mc_files(instance):
     )
 
     mySim.FORCE_EVAL.SUBSYS.COORD.DEFAULT_KEYWORD = project_name +"_box1_"+"initial"+ ".xyz"
-    mySim.FORCE_EVAL.SUBSYS.CELL.PERIODIC=periodicity
+    mySim.FORCE_EVAL.SUBSYS.CELL.PERIODIC=periodicity[0]
     mySim.FORCE_EVAL.SUBSYS.CELL.SYMMETRY="CUBIC"
     mySim.FORCE_EVAL.SUBSYS.init_atoms(num_atoms)
 
@@ -208,12 +209,7 @@ def mc_files(instance):
     # MOTION SECTION
     mySim.MOTION.MC.ENSEMBLE=ensemble
     mySim.MOTION.MC.TEMPERATURE =temperature
-    if check_ensemble.pressure_ensemble(ensemble):
-
-        mySim.MOTION.MC.PRESSURE= pressure
-        if pressure == None:
-            print("you need to define pressure")
-
+    mySim.MOTION.MC.PRESSURE=pressure
     mySim.MOTION.MC.IPRINT= 1
     mySim.MOTION.MC.LBIAS='TRUE'
     mySim.MOTION.MC.LSTOP='FALSE'
@@ -388,12 +384,7 @@ def mc_files(instance):
     # MOTION SECTION
     mySim.MOTION.MC.ENSEMBLE=ensemble
     mySim.MOTION.MC.TEMPERATURE =temperature
-    if pressure_ensemble(ensemble):
-
-        mySim.MOTION.MC.PRESSURE= pressure
-        if pressure == None:
-            print("you need to define pressure")
-
+    mySim.MOTION.MC.PRESSURE=pressure
     mySim.MOTION.MC.IPRINT= 1
     mySim.MOTION.MC.LBIAS='TRUE'
     mySim.MOTION.MC.LSTOP='FALSE'
@@ -462,9 +453,48 @@ def mc_files(instance):
     mySim.write_inputFile(fn=input_filename[1])
     print("MC input file saved as {}".format(input_filename[1]))
 
+def bias_temp_file(bias_object, mc_object):
 
     #creating bias_template.inp file
+    
+    molecule_list=mc_object.molecule_list
+    n_box=mc_object.n_box
+    n_molecules_each_box=mc_object.n_molecules_each_box
+    box_list=mc_object.box_list
+    initial_coordinate_filename=mc_object.initial_coordinate_filename
+    use_atom_name_as_symbol=mc_object.use_atom_name_as_symbol
+    scf_tolerance=mc_object.scf_tolerance
+    basis_set_filename=mc_object.basis_set_filename
+    basis_set=mc_object.basis_set
+    potential_filename=mc_object.potential_filename
+    functional=mc_object.functional
+    periodicity=mc_object.periodicity
+    n_steps=mc_object.n_steps
+    n_ff_moves=mc_object.n_ff_moves
+    nswapmoves=mc_object.nswapmoves
+    ensemble=mc_object.ensemble
+    project_name=mc_object.project_name
+    temperature=mc_object.temperature
+    pressure=mc_object.pressure
+    traj_type=mc_object.traj_type
+    traj_freq=mc_object.traj_freq
+    seed=mc_object.seed
+    input_filename=mc_object.input_filename
+    output_filename=mc_object.output_filename
+    move_probabilities=mc_object.move_probabilities
+    mol_probabilities=mc_object.mol_probabilities
+    avbmc_probabilities=mc_object.avbmc_probabilities
+    run_type=mc_object.run_type
+    restart=mc_object.restart
+    restart_filename=mc_object.restart_filename
+    topology_filename=mc_object.topology_filename
+    charmm_potential_file=mc_object.charmm_potential_file
+    
 
+    charge_list=bias_object.charge_list
+    bend_list=bias_object.bend_list
+    bond_list=bias_object.bond_list
+    lennard_jones_list=bias_object.lennard_jones_list
 
     mySim = sim.SIM()
     mySim.GLOBAL.RUN_TYPE = "MC"
@@ -473,6 +503,7 @@ def mc_files(instance):
 
     mySim.MOTION.MC.ENSEMBLE="TRADITIONAL"
     mySim.MOTION.MC.TEMPERATURE =temperature
+    mySim.MOTION.MC.PRESSURE=pressure
 
     mySim.MOTION.MC.IPRINT= 1
     mySim.MOTION.MC.LBIAS='TRUE'
@@ -510,8 +541,49 @@ def mc_files(instance):
     mySim.MOTION.MC.AVBMC.PBIAS= [0.5]
 
     mySim.FORCE_EVAL.METHOD="FIST"
-    mySim.FORCE_EVAL.MM.FORCEFIELD.PARMTYPE="CHM"
-    mySim.FORCE_EVAL.MM.FORCEFIELD.PARM_FILE_NAME=charmm_potential_file
+    if charmm_potential_file is not None:
+
+        mySim.FORCE_EVAL.MM.FORCEFIELD.PARMTYPE="CHM"
+        mySim.FORCE_EVAL.MM.FORCEFIELD.PARM_FILE_NAME=charmm_potential_file
+
+    else:
+        mySim.FORCE_EVAL.MM.FORCEFIELD.init_charges(len(charge_list))
+        for i in range(len(charge_list)):
+            mySim.FORCE_EVAL.MM.FORCEFIELD.CHARGE[i+1].CHARGE=charge_list[i]["CHARGE"]
+            mySim.FORCE_EVAL.MM.FORCEFIELD.CHARGE[i+1].ATOM=charge_list[i]["ATOM"]
+
+        mySim.FORCE_EVAL.MM.FORCEFIELD.init_bends(len(bend_list))
+        for i in range(len(bend_list)):
+            mySim.FORCE_EVAL.MM.FORCEFIELD.BEND[i+1].ATOMS=bend_list[i]["ATOMS"]
+            mySim.FORCE_EVAL.MM.FORCEFIELD.BEND[i+1].CB=bend_list[i]["CB"]
+            mySim.FORCE_EVAL.MM.FORCEFIELD.BEND[i+1].K=bend_list[i]["K"]
+            mySim.FORCE_EVAL.MM.FORCEFIELD.BEND[i+1].KBS12=bend_list[i]["KBS12"]
+            mySim.FORCE_EVAL.MM.FORCEFIELD.BEND[i+1].KBS32=bend_list[i]["KBS32"]
+            mySim.FORCE_EVAL.MM.FORCEFIELD.BEND[i+1].KIND=bend_list[i]["KIND"]
+            mySim.FORCE_EVAL.MM.FORCEFIELD.BEND[i+1].KSS=bend_list[i]["KSS"]
+            mySim.FORCE_EVAL.MM.FORCEFIELD.BEND[i+1].LEGENDRE=bend_list[i]["LEGENDRE"]
+            mySim.FORCE_EVAL.MM.FORCEFIELD.BEND[i+1].R012=bend_list[i]["R012"]
+            mySim.FORCE_EVAL.MM.FORCEFIELD.BEND[i+1].R032=bend_list[i]["R032"]
+            mySim.FORCE_EVAL.MM.FORCEFIELD.BEND[i+1].THETA0=bend_list[i]["THETA0"]
+
+        mySim.FORCE_EVAL.MM.FORCEFIELD.init_bonds(len(bond_list))
+        for i in range(len(bond_list)):
+            mySim.FORCE_EVAL.MM.FORCEFIELD.BOND[i+1].ATOMS=bond_list[i]["ATOMS"]
+            mySim.FORCE_EVAL.MM.FORCEFIELD.BOND[i+1].CS=bond_list[i]["CS"]
+            mySim.FORCE_EVAL.MM.FORCEFIELD.BOND[i+1].K=bond_list[i]["K"]
+            mySim.FORCE_EVAL.MM.FORCEFIELD.BOND[i+1].KIND=bond_list[i]["KIND"]
+            mySim.FORCE_EVAL.MM.FORCEFIELD.BOND[i+1].R0=bond_list[i]["R0"]
+
+        mySim.FORCE_EVAL.MM.FORCEFIELD.NONBONDED.init_lennard_joness(len(lennard_jones_list))
+        for i in range(len(lennard_jones_list)):
+            mySim.FORCE_EVAL.MM.FORCEFIELD.NONBONDED.LENNARD_JONES[i+1].ATOMS=lennard_jones_list[i]["ATOMS"]
+            mySim.FORCE_EVAL.MM.FORCEFIELD.NONBONDED.LENNARD_JONES[i+1].EPSILON=lennard_jones_list[i]["EPSILON"]
+            mySim.FORCE_EVAL.MM.FORCEFIELD.NONBONDED.LENNARD_JONES[i+1].RCUT=lennard_jones_list[i]["RCUT"]
+            mySim.FORCE_EVAL.MM.FORCEFIELD.NONBONDED.LENNARD_JONES[i+1].RMAX=lennard_jones_list[i]["RMAX"]
+            mySim.FORCE_EVAL.MM.FORCEFIELD.NONBONDED.LENNARD_JONES[i+1].RMIN=lennard_jones_list[i]["RMIN"]
+            mySim.FORCE_EVAL.MM.FORCEFIELD.NONBONDED.LENNARD_JONES[i+1].SIGMA=lennard_jones_list[i]["SIGMA"]
+
+
     mySim.FORCE_EVAL.MM.FORCEFIELD.SPLINE.EMAX_SPLINE=10000
     mySim.FORCE_EVAL.MM.POISSON.EWALD.EWALD_TYPE="EWALD"
     mySim.FORCE_EVAL.MM.POISSON.EWALD.EWALD_ACCURACY=1e-6
@@ -522,6 +594,7 @@ def mc_files(instance):
     mySim.FORCE_EVAL.SUBSYS.CELL.SYMMETRY="CUBIC"
     mySim.FORCE_EVAL.SUBSYS.COORD.DEFAULT_KEYWORD="bias_coord.xyz"
     mySim.FORCE_EVAL.SUBSYS.TOPOLOGY.CONN_FILE_FORMAT="MOL_SET"
+    num_unique_molecules=len(molecule_list)
     mySim.FORCE_EVAL.SUBSYS.TOPOLOGY.MOL_SET.init_molecules(num_unique_molecules)
     for i in range(num_unique_molecules):
 
