@@ -13,8 +13,70 @@ class MC():
 
     Base class for running Monte Carlo simulation.
 
-    :param molecules: Molecule(s) in the simulation box
+    :param molecule_list: Molecules in the system
     :type molecule: list, each element is an mBuild molecule
+    :param n_box: Number of boxes
+    :type n_box: int, optional, default is 2
+    :param n_molecules_each_box: number of molecules of each type in the boxes
+    :type n_molecules_each_box: list, each element in the list is an ordered list containing the number of molecules of each type in the box corresponding to that element
+    :param box_list: Simulation boxes
+    :type box_list: list, each element is an mbuild box
+    :param initial_coordinate_filename: Names of the files containing initial coordinates
+    :type initial_coordinate_filename: list, optional, each element is a string, length must be equal to n_box
+    :param use_atom_name_as_symbol:  If you want the atom name to be same as its symbol. Useful if you have want to use different basis sets for a single atom type in different environment. If you are setting it to false, make sure that the particles in your mbuild molecule have particle.element and particle.name attributes set (particle.element will be the symbol and particle.name will be the name used).
+    :type use_atom_name_as_symbol: boolean, optional
+    :param cutoff: Plane wave cutoff (Ry) for DFT calculation
+    :type cutoff: float, optional
+    :param scf_tolerance: Tolerance for each SCF cycle
+    :type scf_tolerance: float, optional
+    :param basis_set: Basis set for each atomic kind
+    :type basis_set: dictionary with key being the atomic symbol and value being the basis set, both strings
+    :param basis_set_filename: Filename for the basis set
+    :type basis_set_filename: string, optional, defaults to BASIS_MOLOPT
+    :param potential_filename: Filename for the pseudopotential to be used
+    :type potential_filename: string, optional, defaults to GTH_POTENTIALS
+    :param functional: DFT XC functional to be used
+    :type functional: string
+    :param periodicity: Periodicity of the box
+    :type periodiicity: string, optional, defaults to 'XYZ'
+    :param n_steps: Number of Monte Carlo cycles
+    :type  n_steps: int
+    :param n_ff_moves: Number of force-field-based moves between first-principles steps
+    :type  n_ff_moves: int, optional, deault value is 8
+    :param nswapmoves: Number insertions to try during each swap move
+    :type  nswapmvoes: int, optional
+    :param ensemble: Simulation ensemble
+    :type ensemble: string
+    :param project_name: Name of the project
+    :type project_name: string, optional
+    :param temperature: Simulation temperature
+    :type temperature: unyt quantity
+    :param pressure: Simulation pressure
+    :type pressure: unyt quantity
+    :param traj_type: Output trajectory format
+    :type traj_type: string, optional
+    :param seed: Random number seed for MD simulation
+    :type seed: integer, optional
+    :param input_filename: Name(s) that should be given to the input file(s)
+    :type input_filename: list of string(s), optional, size of the list should equal the total number of boxes
+    :param output_filename: Name(s) that should be given to the output file(s)
+    :type output_filename: list of string(s), optional, size of the list should equal the total number of boxes
+    :param move_probabilities: probabilities of different moves, in this order:[pmavbmc,pmcltrans,pmhmc,pmswap,pmtraion,pmtrans,pmvolume]
+    :type move_probabilities: list of float
+    :param mol_probabilities: move probabilities for each molecule in all the boes
+    :type mol_probabilities: list in which each element contains the mol_probabilities for the molecules in the box corresponding to that element. The order is [[PMAVBMC_MOL,PMSWAP_MOL , PMTRAION_MOL, PMTRANS_MOL,PMROT_MOL],[similarly for box2]].Here PMAVBMC_MOL, PMSWAP_MOL, etc. will also be lists defining the move probabilities of each molecule type. Example, if you have 2 molecules and two boxes, and you want to give equal move probabilities to both molecules then mol_probabilities can be defined as mol_probabilities=[[[0.5,1],[0.5,1],[0.5,1],[0.5,1],[0.5,1]],[[0.5,1],[0.5,1],[0.5,1],[0.5,1],[0.5,1]]].
+    :param avbmc_probabilities: AVBMC move probabilities for each molecule in all the boxes
+    :type avbmc_probabilities: Defined in a similar manner as avbmc_probabilities.
+    :param run_type: Type of run, equilibration or production
+    :type run_type: string, optional, default is "equilibration"
+    :param restart: If you want to restart a simulation
+    :type restart: boolean, optional, default os False
+    :param restart_filename: Name(s) of the restart files
+    :type restart_filename: list of strings, length should equal the number of boxes
+    :param topology_filename: Names of the topology files
+    :type topology_filename: list of strings, length should equal the total number of unique molecules
+    :param charmm_potential_file: Name of the charmm potential file to be used a biasing potential, if not available, bias_template.inp file must be prepared
+    :param charmm_potential_file: string
     """
 
     def __init__(self,molecule_list=None, n_box=2,n_molecules_each_box=None,box_list=None,
