@@ -17,8 +17,8 @@ sys.path.insert(0, os.path.abspath(os.path.join('..', '..')))
 
 # -- Project information -----------------------------------------------------
 master_doc = 'index'
-project = 'cp2kmdpy'
-copyright = '2020, Ramanish Singh'
+project = 'cp2kmcpy'
+copyright = '2021, Ramanish Singh'
 author = 'Ramanish Singh'
 
 # The full version, including alpha/beta/rc tags

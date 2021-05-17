@@ -1,7 +1,7 @@
-Running molecular dynamics
+Running Monte Carlo
 ===========================
 
-This functionality of the cp2kmdpy package can be used to run molecular dynamics simulations.
+This functionality of the mosdef_cp2kmcpy package can be used to run Monte Carlo simulations in CP2K. 
 
 .. autoclass:: cp2kmdpy.md.MD
     :members:
