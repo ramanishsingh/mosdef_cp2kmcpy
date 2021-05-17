@@ -3,7 +3,7 @@ Running Monte Carlo
 
 This functionality of the mosdef_cp2kmcpy package can be used to run Monte Carlo simulations in CP2K. 
 
-.. autoclass:: cp2kmdpy.md.MD
+.. autoclass:: mosdef_cp2kmcpy.mc.MC
     :members:
 
 Instantiating ``MD`` first requires the specification of the molecule(s), functional, box , the basis set, and the number of molecules of each type.
