@@ -11,8 +11,8 @@ It can be done as follows:
 
 .. code-block:: python
 
-  import cp2kmdpy
-  md_instance = cp2kmdpy.md.MD(
+  import mosdef_cp2kmcpy
+  mc_instance = mosdef_cp2kmcpy.mc.MC(
       molecules=[molecule],
       functional=functional,
       box=box,
@@ -20,7 +20,7 @@ It can be done as follows:
       n_molecules=n_molecules
   )
 
-MD class
+MC class
 ****************************
 
 molecules
@@ -136,7 +136,7 @@ Time step for the molecula dynamics simulation. Should be a ``unyt_quantity``.
 ensemble
 ~~~~~~~~~~
 Ensemble for the molecular dynamics simulation. Must be a string of capital letters.
-Deafult value is ``'NVT'``
+Deafult value is ``'NVT_GEMC'``
 
 project_name
 ~~~~~~~~~~~~~~~
@@ -203,21 +203,32 @@ use_atom_name_as_symbol
 
 If you want to make the atom name different from its symbol, set this flag to ``False``. In that case, you will have to set the ``particle.name`` and ``particle.element`` attributes of the particles in the ``mbuild`` molecule.
 
-Running molecular dynamics
+
+Biasiang potential file (bias_template.inp)
+********************************************
+The bias_template.inp file contains the
+
+.. autoclass:: mosdef_cp2kmcpy.bias_template.biasing_potential
+    :members:
+
+
+Running Monte Carlo
 *********************************
 
-0. Copy the setter.py file from ``cp2kmdpy/setter.py`` and change any settings if needed
-1. Instantiate a ``cp2kmdpy.md.MD`` class and set all the attributes
-2. Run the ``md_initialization`` method on that instance
-3. Generate input files using ``setter.md_files`` function
-4. Run using the ``run_md`` method from ``cp2kmdpy.runners``
+0. Copy the setter.py file from ``mosdef_cp2kmcpy/setter.py`` and change any settings if needed
+1. Instantiate a ``cp2kmdpy.mc.MC`` class and set all the attributes
+2. Run the ``mc_initialization`` method on that instance
+3. Generate input files using ``setter.mc_files`` function
+4. Generate the biasing potential file using ``setter.mc_files`` function
+5. Run using the ``run_mc`` method from ``mosdef_cp2kmcpy.runners``
 
 
 Examples
 *************
 
-Dinitrogen *NpT* MD
-~~~~~~~~~~~~~~~~~~~~~~~~
+
+Dinitrogen *NVT-GEMC* VLE simulation
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. code-block:: python
 

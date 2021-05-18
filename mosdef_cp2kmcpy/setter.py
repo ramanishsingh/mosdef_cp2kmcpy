@@ -554,35 +554,56 @@ def bias_temp_file(bias_object, mc_object):
 
         mySim.FORCE_EVAL.MM.FORCEFIELD.init_bends(len(bend_list))
         for i in range(len(bend_list)):
-            mySim.FORCE_EVAL.MM.FORCEFIELD.BEND[i+1].ATOMS=bend_list[i]["ATOMS"]
-            mySim.FORCE_EVAL.MM.FORCEFIELD.BEND[i+1].CB=bend_list[i]["CB"]
-            mySim.FORCE_EVAL.MM.FORCEFIELD.BEND[i+1].K=bend_list[i]["K"]
-            mySim.FORCE_EVAL.MM.FORCEFIELD.BEND[i+1].KBS12=bend_list[i]["KBS12"]
-            mySim.FORCE_EVAL.MM.FORCEFIELD.BEND[i+1].KBS32=bend_list[i]["KBS32"]
-            mySim.FORCE_EVAL.MM.FORCEFIELD.BEND[i+1].KIND=bend_list[i]["KIND"]
-            mySim.FORCE_EVAL.MM.FORCEFIELD.BEND[i+1].KSS=bend_list[i]["KSS"]
-            mySim.FORCE_EVAL.MM.FORCEFIELD.BEND[i+1].LEGENDRE=bend_list[i]["LEGENDRE"]
-            mySim.FORCE_EVAL.MM.FORCEFIELD.BEND[i+1].R012=bend_list[i]["R012"]
-            mySim.FORCE_EVAL.MM.FORCEFIELD.BEND[i+1].R032=bend_list[i]["R032"]
-            mySim.FORCE_EVAL.MM.FORCEFIELD.BEND[i+1].THETA0=bend_list[i]["THETA0"]
+            if "ATOMS" in bend_list[i]:
+                mySim.FORCE_EVAL.MM.FORCEFIELD.BEND[i+1].ATOMS=bend_list[i]["ATOMS"]
+            if "CB" in bend_list[i]:
+                mySim.FORCE_EVAL.MM.FORCEFIELD.BEND[i+1].CB=bend_list[i]["CB"]
+            if "K" in bend_list[i]:
+                mySim.FORCE_EVAL.MM.FORCEFIELD.BEND[i+1].K=bend_list[i]["K"]
+            if "KBS12" in bend_list[i]:
+                mySim.FORCE_EVAL.MM.FORCEFIELD.BEND[i+1].KBS12=bend_list[i]["KBS12"]
+            if "KBS32" in bend_list[i]:
+                mySim.FORCE_EVAL.MM.FORCEFIELD.BEND[i+1].KBS32=bend_list[i]["KBS32"]
+            if "KIND" in bend_list[i]:
+                mySim.FORCE_EVAL.MM.FORCEFIELD.BEND[i+1].KIND=bend_list[i]["KIND"]
+            if "KSS" in bend_list[i]:
+                mySim.FORCE_EVAL.MM.FORCEFIELD.BEND[i+1].KSS=bend_list[i]["KSS"]
+            if "LEGENDRE" in bend_list[i]:
+                mySim.FORCE_EVAL.MM.FORCEFIELD.BEND[i+1].LEGENDRE=bend_list[i]["LEGENDRE"]
+            if "R012" in bend_list[i]:
+                mySim.FORCE_EVAL.MM.FORCEFIELD.BEND[i+1].R012=bend_list[i]["R012"]
+            if "R032" in bend_list[i]:
+                mySim.FORCE_EVAL.MM.FORCEFIELD.BEND[i+1].R032=bend_list[i]["R032"]
+            if "THETA0" in bend_list[i]:
+                mySim.FORCE_EVAL.MM.FORCEFIELD.BEND[i+1].THETA0=bend_list[i]["THETA0"]
 
         mySim.FORCE_EVAL.MM.FORCEFIELD.init_bonds(len(bond_list))
         for i in range(len(bond_list)):
-            mySim.FORCE_EVAL.MM.FORCEFIELD.BOND[i+1].ATOMS=bond_list[i]["ATOMS"]
-            mySim.FORCE_EVAL.MM.FORCEFIELD.BOND[i+1].CS=bond_list[i]["CS"]
-            mySim.FORCE_EVAL.MM.FORCEFIELD.BOND[i+1].K=bond_list[i]["K"]
-            mySim.FORCE_EVAL.MM.FORCEFIELD.BOND[i+1].KIND=bond_list[i]["KIND"]
-            mySim.FORCE_EVAL.MM.FORCEFIELD.BOND[i+1].R0=bond_list[i]["R0"]
+            if "ATOMS" in bond_list[i]:
+                mySim.FORCE_EVAL.MM.FORCEFIELD.BOND[i+1].ATOMS=bond_list[i]["ATOMS"]
+            if "CS" in bond_list[i]:
+                mySim.FORCE_EVAL.MM.FORCEFIELD.BOND[i+1].CS=bond_list[i]["CS"]
+            if "K" in bond_list[i]:
+                mySim.FORCE_EVAL.MM.FORCEFIELD.BOND[i+1].K=bond_list[i]["K"]
+            if "KIND" in bond_list[i]:
+                mySim.FORCE_EVAL.MM.FORCEFIELD.BOND[i+1].KIND=bond_list[i]["KIND"]
+            if "R0" in bond_list[i]:
+                mySim.FORCE_EVAL.MM.FORCEFIELD.BOND[i+1].R0=bond_list[i]["R0"]
 
         mySim.FORCE_EVAL.MM.FORCEFIELD.NONBONDED.init_lennard_joness(len(lennard_jones_list))
         for i in range(len(lennard_jones_list)):
-            mySim.FORCE_EVAL.MM.FORCEFIELD.NONBONDED.LENNARD_JONES[i+1].ATOMS=lennard_jones_list[i]["ATOMS"]
-            mySim.FORCE_EVAL.MM.FORCEFIELD.NONBONDED.LENNARD_JONES[i+1].EPSILON=lennard_jones_list[i]["EPSILON"]
-            mySim.FORCE_EVAL.MM.FORCEFIELD.NONBONDED.LENNARD_JONES[i+1].RCUT=lennard_jones_list[i]["RCUT"]
-            mySim.FORCE_EVAL.MM.FORCEFIELD.NONBONDED.LENNARD_JONES[i+1].RMAX=lennard_jones_list[i]["RMAX"]
-            mySim.FORCE_EVAL.MM.FORCEFIELD.NONBONDED.LENNARD_JONES[i+1].RMIN=lennard_jones_list[i]["RMIN"]
-            mySim.FORCE_EVAL.MM.FORCEFIELD.NONBONDED.LENNARD_JONES[i+1].SIGMA=lennard_jones_list[i]["SIGMA"]
-
+            if "ATOMS" in lennard_jones_list[i]:
+                mySim.FORCE_EVAL.MM.FORCEFIELD.NONBONDED.LENNARD_JONES[i+1].ATOMS=lennard_jones_list[i]["ATOMS"]
+            if "EPSILON" in lennard_jones_list[i]:
+                mySim.FORCE_EVAL.MM.FORCEFIELD.NONBONDED.LENNARD_JONES[i+1].EPSILON=lennard_jones_list[i]["EPSILON"]
+            if "RCUT" in lennard_jones_list[i]:
+                mySim.FORCE_EVAL.MM.FORCEFIELD.NONBONDED.LENNARD_JONES[i+1].RCUT=lennard_jones_list[i]["RCUT"]
+            if "RMAX" in lennard_jones_list[i]:
+                mySim.FORCE_EVAL.MM.FORCEFIELD.NONBONDED.LENNARD_JONES[i+1].RMAX=lennard_jones_list[i]["RMAX"]
+            if "RMIN" in lennard_jones_list[i]:
+                mySim.FORCE_EVAL.MM.FORCEFIELD.NONBONDED.LENNARD_JONES[i+1].RMIN=lennard_jones_list[i]["RMIN"]
+            if "SIGMA" in lennard_jones_list[i]:
+                mySim.FORCE_EVAL.MM.FORCEFIELD.NONBONDED.LENNARD_JONES[i+1].SIGMA=lennard_jones_list[i]["SIGMA"]
 
     mySim.FORCE_EVAL.MM.FORCEFIELD.SPLINE.EMAX_SPLINE=10000
     mySim.FORCE_EVAL.MM.POISSON.EWALD.EWALD_TYPE="EWALD"
