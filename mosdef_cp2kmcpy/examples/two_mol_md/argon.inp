@@ -1,0 +1,54 @@
+##  It's highly recommended to go 
+##  https://manual.cp2k.org/ 
+##  and learn how to set up CP2K 
+##  calculation correctly using manual.
+
+&GLOBAL
+  PROJECT ar108           #Project Name
+  RUN_TYPE md             #Calculation Type : MD (molecular dynamics), GEO_OPT (Geometry Optimization), Energy (Energy Calculation)
+&END GLOBAL
+
+&MOTION
+  &MD
+    ENSEMBLE NVE          #The ensemble for MD propagation, NVE (microcanonical), NVT (canonical), NPT_I (NPT with isotropic cell) 
+    STEPS 30000           #The number of MD steps to perform
+    TIMESTEP 5.           #The length of an integration step (fs)
+    TEMPERATURE 85.       #The temperature in K used to initialize the velocities with init and pos restart, and in the NPT/NVT simulations
+  &END MD
+&END MOTION
+
+&FORCE_EVAL
+  METHOD FIST             #Method to calculate force: Fist (Molecular Mechanics), QS or QUICKSTEP (Electronic structure methods, like DFT)
+  &MM
+    &FORCEFIELD
+      &CHARGE             #charge of the MM atoms 
+        ATOM Ar           #Defines the atomic kind of the charge
+        CHARGE 0.0        #Defines the charge of the MM atom in electron charge unit
+      &END
+      &NONBONDED
+        &LENNARD-JONES    #LENNARD-JONES potential type.Functional form: V(r) = 4.0 * EPSILON * [(SIGMA/r)^12-(SIGMA/r)^6]
+          atoms Ar Ar     #Defines the atomic kind involved in the nonbonded potential 
+          EPSILON 119.8   #Defines the EPSILON parameter of the LJ potential (K_e) 
+          SIGMA 3.405     #Defines the SIGMA parameter of the LJ potential (Angstrom)
+          RCUT 8.4        #Defines the cutoff parameter of the LJ potential 
+        &END LENNARD-JONES
+      &END NONBONDED
+    &END FORCEFIELD
+    &POISSON              # Poisson solver
+      &EWALD
+        EWALD_TYPE none
+      &END EWALD
+    &END POISSON
+  &END MM
+  &SUBSYS
+    &CELL
+      ABC 17.1580 17.158 17.158    #Simulation box size
+    &END CELL
+
+    &COORD
+      @INCLUDE       bias_coord.xyz
+    &END COORD
+    &TOPOLOGY
+    &END TOPOLOGY
+  &END SUBSYS
+&END FORCE_EVAL

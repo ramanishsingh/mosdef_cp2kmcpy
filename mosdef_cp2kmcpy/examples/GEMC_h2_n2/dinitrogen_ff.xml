@@ -1,0 +1,17 @@
+<ForceField>
+    <AtomTypes>
+        <Type name="N" def="[N;X1](N)"
+              class="N2" element="N" mass=" 14.0067" desc="N in N2"
+              doi="random" />
+    </AtomTypes>
+    <HarmonicBondForce>
+        <Bond class1="N2" class2="N2" length="0.1121" k="650500"/>
+    </HarmonicBondForce>
+    <HarmonicAngleForce>
+    </HarmonicAngleForce>
+    <RBTorsionForce>
+    </RBTorsionForce>
+    <NonbondedForce coulomb14scale="0" lj14scale="0">
+        <Atom type="N" charge="0" sigma="0.32973" epsilon="0.30491436"/>
+    </NonbondedForce>
+</ForceField>

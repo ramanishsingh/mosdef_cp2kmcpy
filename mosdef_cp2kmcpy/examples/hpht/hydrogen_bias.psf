@@ -1,0 +1,37 @@
+PSF 
+
+       3 !NTITLE
+ REMARKS this file hydrogen_bias - created by mBuild/foyer using the
+ REMARKS parameters from the {'H2': 'h2_ff.xml'} force field via MoSDef
+ REMARKS created on 2022-09-27 13:21:15.028209
+
+
+       2 !NATOM
+       1 SYS  1    H2   H1      A   0.000000        1.0079           
+       2 SYS  1    H2   H2      A   0.000000        1.0079           
+
+       1 !NBOND: bonds
+       2       1
+
+       0 !NTHETA: angles
+
+
+       0 !NPHI: dihedrals
+
+
+       0 !NIMPHI: impropers
+
+
+       0 !NDON: donors
+
+
+       0 !NACC: acceptors
+
+
+       0 !NNB
+
+       0       0
+
+       1       0 !NGRP 
+       0       1       0
+

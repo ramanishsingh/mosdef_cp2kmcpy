@@ -1,0 +1,432 @@
+SIM/GLOBAL/RUN_TYPE
+
+New: MC
+Previous: None
+Date: 2022-10-03 12:34:04.707635
+Success: True
+ErrorMessage: None
+
+SIM/GLOBAL/PRINT_LEVEL
+
+New: LOW
+Previous: None
+Date: 2022-10-03 12:34:04.707643
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/MC/ENSEMBLE
+
+New: TRADITIONAL
+Previous: None
+Date: 2022-10-03 12:34:04.707647
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/MC/TEMPERATURE
+
+New: 298
+Previous: None
+Date: 2022-10-03 12:34:04.707651
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/MC/PRESSURE
+
+New: 1.0
+Previous: None
+Date: 2022-10-03 12:34:04.707654
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/MC/ETA
+
+New: 1
+Previous: None
+Date: 2022-10-03 12:34:04.707657
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/MC/LBIAS
+
+New: TRUE
+Previous: None
+Date: 2022-10-03 12:34:04.707659
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/MC/LSTOP
+
+New: FALSE
+Previous: None
+Date: 2022-10-03 12:34:04.707661
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/MC/NMOVES
+
+New: 8
+Previous: None
+Date: 2022-10-03 12:34:04.707663
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/MC/NSWAPMOVES
+
+New: 640
+Previous: None
+Date: 2022-10-03 12:34:04.707665
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/MC/NSTEP
+
+New: 1
+Previous: None
+Date: 2022-10-03 12:34:04.707667
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/MC/RESTART
+
+New: FALSE
+Previous: None
+Date: 2022-10-03 12:34:04.707669
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/MC/ETA
+
+New: [0.0]
+Previous: None
+Date: 2022-10-03 12:34:04.707672
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/MC/MOVE_PROBABILITIES/PMSWAP
+
+New: 0.0
+Previous: None
+Date: 2022-10-03 12:34:04.707675
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/MC/MOVE_PROBABILITIES/PMTRAION
+
+New: 0.2
+Previous: None
+Date: 2022-10-03 12:34:04.707677
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/MC/MOVE_PROBABILITIES/PMTRANS
+
+New: 0.6
+Previous: None
+Date: 2022-10-03 12:34:04.707679
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/MC/MOVE_PROBABILITIES/PMVOLUME
+
+New: 0.02
+Previous: None
+Date: 2022-10-03 12:34:04.707681
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/MC/MOVE_PROBABILITIES/PMHMC
+
+New: 0.0
+Previous: None
+Date: 2022-10-03 12:34:04.707684
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/MC/MOVE_PROBABILITIES/PMAVBMC
+
+New: 0.0
+Previous: None
+Date: 2022-10-03 12:34:04.707686
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/MC/MOVE_PROBABILITIES/MOL_PROBABILITIES/PMAVBMC_MOL
+
+New: [1]
+Previous: None
+Date: 2022-10-03 12:34:04.707690
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/MC/MOVE_PROBABILITIES/MOL_PROBABILITIES/PMSWAP_MOL
+
+New: [1.0]
+Previous: None
+Date: 2022-10-03 12:34:04.707694
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/MC/MOVE_PROBABILITIES/MOL_PROBABILITIES/PMTRAION_MOL
+
+New: [1.0]
+Previous: None
+Date: 2022-10-03 12:34:04.707696
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/MC/MOVE_PROBABILITIES/MOL_PROBABILITIES/PMTRANS_MOL
+
+New: [1.0]
+Previous: None
+Date: 2022-10-03 12:34:04.707699
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/MC/MOVE_PROBABILITIES/MOL_PROBABILITIES/PMROT_MOL
+
+New: [1.0]
+Previous: None
+Date: 2022-10-03 12:34:04.707701
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/MC/MOVE_PROBABILITIES/BOX_PROBABILITIES/PMVOL_BOX
+
+New: 1.0
+Previous: None
+Date: 2022-10-03 12:34:04.707704
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/MC/MOVE_PROBABILITIES/BOX_PROBABILITIES/PMHMC_BOX
+
+New: 1.0
+Previous: None
+Date: 2022-10-03 12:34:04.707707
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/MC/AVBMC/IUPTRANS
+
+New: 100
+Previous: None
+Date: 2022-10-03 12:34:04.707710
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/MC/AVBMC/IUPVOLUME
+
+New: 100
+Previous: None
+Date: 2022-10-03 12:34:04.707712
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/MC/MAX_DISPLACEMENTS/MOL_DISPLACEMENTS/RMDIHEDRAL
+
+New: [3.0]
+Previous: None
+Date: 2022-10-03 12:34:04.707716
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/MC/MAX_DISPLACEMENTS/MOL_DISPLACEMENTS/RMANGLE
+
+New: [3.0]
+Previous: None
+Date: 2022-10-03 12:34:04.707719
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/MC/MAX_DISPLACEMENTS/MOL_DISPLACEMENTS/RMBOND
+
+New: [0.074]
+Previous: None
+Date: 2022-10-03 12:34:04.707722
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/MC/MAX_DISPLACEMENTS/MOL_DISPLACEMENTS/RMROT
+
+New: [26.0]
+Previous: None
+Date: 2022-10-03 12:34:04.707724
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/MC/MAX_DISPLACEMENTS/MOL_DISPLACEMENTS/RMTRANS
+
+New: [0.38]
+Previous: None
+Date: 2022-10-03 12:34:04.707727
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/MC/MAX_DISPLACEMENTS/THERMOSTAT/RMVOLUME
+
+New: 100.5
+Previous: None
+Date: 2022-10-03 12:34:04.707730
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/MC/AVBMC/AVBMC_ATOM
+
+New: [1]
+Previous: None
+Date: 2022-10-03 12:34:04.707735
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/MC/AVBMC/AVBMC_RMIN
+
+New: [1.0]
+Previous: None
+Date: 2022-10-03 12:34:04.707738
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/MC/AVBMC/AVBMC_RMAX
+
+New: [5.0]
+Previous: None
+Date: 2022-10-03 12:34:04.707740
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/MC/AVBMC/PBIAS
+
+New: [0.5]
+Previous: None
+Date: 2022-10-03 12:34:04.707743
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/METHOD
+
+New: FIST
+Previous: None
+Date: 2022-10-03 12:34:04.707746
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/MM/FORCEFIELD/PARMTYPE
+
+New: CHM
+Previous: None
+Date: 2022-10-03 12:34:04.707758
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/MM/FORCEFIELD/PARM_FILE_NAME
+
+New: overall_charmm_bias.inp
+Previous: None
+Date: 2022-10-03 12:34:04.707761
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/MM/FORCEFIELD/SPLINE/EMAX_SPLINE
+
+New: 10000
+Previous: None
+Date: 2022-10-03 12:34:04.707770
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/MM/POISSON/EWALD/EWALD_TYPE
+
+New: EWALD
+Previous: None
+Date: 2022-10-03 12:34:04.707776
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/MM/POISSON/EWALD/EWALD_ACCURACY
+
+New: 1e-06
+Previous: None
+Date: 2022-10-03 12:34:04.707779
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/MM/POISSON/EWALD/GMAX
+
+New: 25
+Previous: None
+Date: 2022-10-03 12:34:04.707781
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/SUBSYS/DFT/ABC
+
+New: 10 10 10
+Previous: None
+Date: 2022-10-03 12:34:04.707784
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/SUBSYS/DFT/PERIODIC
+
+New: XYZ
+Previous: None
+Date: 2022-10-03 12:34:04.707787
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/SUBSYS/DFT/SYMMETRY
+
+New: CUBIC
+Previous: None
+Date: 2022-10-03 12:34:04.707790
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/SUBSYS/DFT/DEFAULT_KEYWORD
+
+New: bias_coord.xyz
+Previous: None
+Date: 2022-10-03 12:34:04.707792
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/SUBSYS/TOPOLOGY/CONN_FILE_FORMAT
+
+New: MOL_SET
+Previous: None
+Date: 2022-10-03 12:34:04.707796
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/SUBSYS/TOPOLOGY/MOL_SET/MOLECULE/NMOL
+
+New: 2
+Previous: None
+Date: 2022-10-03 12:34:04.707821
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/SUBSYS/TOPOLOGY/MOL_SET/MOLECULE/CONN_FILE_NAME
+
+New: hydrogen_bias.psf
+Previous: None
+Date: 2022-10-03 12:34:04.707825
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/SUBSYS/TOPOLOGY/MOL_SET/MOLECULE/NMOL
+
+New: 2
+Previous: None
+Date: 2022-10-03 12:34:04.707827
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/SUBSYS/TOPOLOGY/MOL_SET/MOLECULE/CONN_FILE_NAME
+
+New: nitrogen_bias.psf
+Previous: None
+Date: 2022-10-03 12:34:04.707830
+Success: True
+ErrorMessage: None
+

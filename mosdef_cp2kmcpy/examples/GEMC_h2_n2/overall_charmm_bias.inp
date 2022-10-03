@@ -1,0 +1,39 @@
+*  overall_bias - created by mBuild using the on 2022-10-03 12:38:02.465384
+*  parameters from the {'H2': 'h2_ff.xml', 'N2': 'dinitrogen_ff.xml'} force field(s) via MoSDef
+*  1-4 coulombic scaling = {'H2': 0.0, 'N2': 0.0}, and 1-4 LJ scaling = {'H2': 0.0, 'N2': 0.0}
+
+*  4 atoms
+*  2 bonds
+*  0 angles
+*  0 dihedrals
+*  0 impropers
+
+*  2 atom types
+*  2 bond types
+
+
+*  Masses
+
+! atom_types 	mass 		  atomTypeForceFieldName_ResidueName (i.e., atoms_type_per_utilized_FF)  
+*  A		1.007947	! H_H2
+*  B		14.006720	! N_N2
+
+BONDS * harmonic
+!
+!V(bond) = Kb(b - b0)**2
+!
+!Kb: kcal/mole/A**2
+!b0: A
+!Kb (kcal/mol) = Kb_K (K) * Boltz. const.; (9999999999 if no stretching)
+!
+!atom_types 	 Kb	b0 		  atoms_types_per_utilized_FF
+A	A	777.366	0.741		! H_H2	H_H2
+B	B	777.366	1.121		! N_N2	N_N2
+
+NONBONDED
+!
+!V(Lennard-Jones) = Eps,i,j[(Rmin,i,j/ri,j)**12 - 2(Rmin,i,j/ri,j)**6]
+!
+!atype 	ignored	epsilon 	Rmin/2 		ignored	eps,1-4		Rmin/2,1-4		  atom_type_per_utilized_FF
+A	0.00	-0.016493786	1.70053000319	0.00	-0.000000000	0.00000000000		! H_H2	H_H2
+B	0.00	-0.072876281	1.85054705595	0.00	-0.000000000	0.00000000000		! N_N2	N_N2

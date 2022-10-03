@@ -1,0 +1,21 @@
+
+  Pair potential vdW calculation
+  Dispersion potential type: DFT-D3
+  Scaling parameter (s6)    1.0000000000000000     
+  Scaling parameter (s8)   0.72199999999999998     
+  Zero Damping parameter (sr6)   1.2170000000000001     
+  Zero Damping parameter (sr8)   1.0000000000000000     
+  Cutoff coordination numbers   9.9999999999999995E-007
+  Apply a long range correction
+  Calculate C9 Terms
+  Search in cells   -3:  3
+                    -3:  3
+                    -3:  3
+
+  Use reference coordination numbers for C9 term
+  Difference in CN Atom:     1               1.000     0.000
+  Difference in CN Atom:     2               1.000     0.000
+
+  Total vdW energy [au]     :  -3.8214262729528804E-005
+  Total vdW energy [kcal]   :  -2.3979811702693858E-002
+

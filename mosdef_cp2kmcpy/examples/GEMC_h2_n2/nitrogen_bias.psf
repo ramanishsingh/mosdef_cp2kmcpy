@@ -1,0 +1,37 @@
+PSF 
+
+       3 !NTITLE
+ REMARKS this file nitrogen_bias - created by mBuild/foyer using the
+ REMARKS parameters from the {'N2': 'dinitrogen_ff.xml'} force field via MoSDef
+ REMARKS created on 2022-10-03 12:38:06.564366
+
+
+       2 !NATOM
+       1 SYS  1    N2   NN1     A   0.000000       14.0067           
+       2 SYS  1    N2   NN2     A   0.000000       14.0067           
+
+       1 !NBOND: bonds
+       1       2
+
+       0 !NTHETA: angles
+
+
+       0 !NPHI: dihedrals
+
+
+       0 !NIMPHI: impropers
+
+
+       0 !NDON: donors
+
+
+       0 !NACC: acceptors
+
+
+       0 !NNB
+
+       0       0
+
+       1       0 !NGRP 
+       0       1       0
+
