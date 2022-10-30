@@ -2,7 +2,7 @@ SIM/GLOBAL/PRINT_LEVEL
 
 New: LOW
 Previous: None
-Date: 2022-10-03 20:36:14.919453
+Date: 2022-10-04 12:01:32.350984
 Success: True
 ErrorMessage: None
 
@@ -10,7 +10,7 @@ SIM/GLOBAL/RUN_TYPE
 
 New: MC
 Previous: None
-Date: 2022-10-03 20:36:14.919461
+Date: 2022-10-04 12:01:32.350992
 Success: True
 ErrorMessage: None
 
@@ -18,7 +18,7 @@ SIM/GLOBAL/PRINT_LEVEL
 
 New: LOW
 Previous: LOW
-Date: 2022-10-03 20:36:14.919464
+Date: 2022-10-04 12:01:32.350995
 Success: True
 ErrorMessage: None
 
@@ -26,7 +26,7 @@ SIM/GLOBAL/SEED
 
 New: 1
 Previous: None
-Date: 2022-10-03 20:36:14.919466
+Date: 2022-10-04 12:01:32.350998
 Success: True
 ErrorMessage: None
 
@@ -34,7 +34,7 @@ SIM/MOTION/METHOD
 
 New: QUICKSTEP
 Previous: None
-Date: 2022-10-03 20:36:14.919469
+Date: 2022-10-04 12:01:32.351001
 Success: True
 ErrorMessage: None
 
@@ -42,7 +42,7 @@ SIM/MOTION/STRESS_TENSOR
 
 New: ANALYTICAL
 Previous: QUICKSTEP
-Date: 2022-10-03 20:36:14.919471
+Date: 2022-10-04 12:01:32.351003
 Success: True
 ErrorMessage: None
 
@@ -50,7 +50,7 @@ SIM/MOTION/DFT/ABASIS_SET_FILE_NAME
 
 New: BASIS_MOLOPT
 Previous: None
-Date: 2022-10-03 20:36:14.919474
+Date: 2022-10-04 12:01:32.351006
 Success: True
 ErrorMessage: None
 
@@ -58,7 +58,7 @@ SIM/MOTION/DFT/POTENTIAL_FILE_NAME
 
 New: GTH_POTENTIALS
 Previous: None
-Date: 2022-10-03 20:36:14.919476
+Date: 2022-10-04 12:01:32.351008
 Success: True
 ErrorMessage: None
 
@@ -66,7 +66,7 @@ SIM/MOTION/DFT/CHARGE
 
 New: 0
 Previous: None
-Date: 2022-10-03 20:36:14.919478
+Date: 2022-10-04 12:01:32.351010
 Success: True
 ErrorMessage: None
 
@@ -74,7 +74,7 @@ SIM/MOTION/DFT/MULTIPLICITY
 
 New: 1
 Previous: None
-Date: 2022-10-03 20:36:14.919481
+Date: 2022-10-04 12:01:32.351012
 Success: True
 ErrorMessage: None
 
@@ -82,7 +82,7 @@ SIM/MOTION/DFT/MGRID/CUTOFF
 
 New: 200
 Previous: None
-Date: 2022-10-03 20:36:14.919483
+Date: 2022-10-04 12:01:32.351015
 Success: True
 ErrorMessage: None
 
@@ -90,7 +90,7 @@ SIM/MOTION/DFT/MGRID/REL_CUTOFF
 
 New: 60
 Previous: None
-Date: 2022-10-03 20:36:14.919485
+Date: 2022-10-04 12:01:32.351017
 Success: True
 ErrorMessage: None
 
@@ -98,7 +98,7 @@ SIM/MOTION/DFT/MGRID/NGRIDS
 
 New: 4
 Previous: None
-Date: 2022-10-03 20:36:14.919488
+Date: 2022-10-04 12:01:32.351019
 Success: True
 ErrorMessage: None
 
@@ -106,7 +106,7 @@ SIM/MOTION/DFT/ENERGY/METHOD
 
 New: GPW
 Previous: None
-Date: 2022-10-03 20:36:14.919491
+Date: 2022-10-04 12:01:32.351023
 Success: True
 ErrorMessage: None
 
@@ -114,7 +114,7 @@ SIM/MOTION/DFT/ENERGY/EPS_DEFAULT
 
 New: 1e-08
 Previous: None
-Date: 2022-10-03 20:36:14.919493
+Date: 2022-10-04 12:01:32.351025
 Success: True
 ErrorMessage: None
 
@@ -122,7 +122,7 @@ SIM/MOTION/DFT/ENERGY/EXTRAPOLATION
 
 New: ASPC
 Previous: None
-Date: 2022-10-03 20:36:14.919496
+Date: 2022-10-04 12:01:32.351028
 Success: True
 ErrorMessage: None
 
@@ -130,7 +130,7 @@ SIM/MOTION/DFT/POISSON/PERIODIC
 
 New: XYZ
 Previous: None
-Date: 2022-10-03 20:36:14.919499
+Date: 2022-10-04 12:01:32.351031
 Success: True
 ErrorMessage: None
 
@@ -138,7 +138,7 @@ SIM/MOTION/DFT/PRINT/PRINT/SECTION_PARAMETERS
 
 New: OFF
 Previous: None
-Date: 2022-10-03 20:36:14.919505
+Date: 2022-10-04 12:01:32.351034
 Success: True
 ErrorMessage: None
 
@@ -146,7 +146,7 @@ SIM/MOTION/DFT/SCF/SCF_GUESS
 
 New: ATOMIC
 Previous: None
-Date: 2022-10-03 20:36:14.919508
+Date: 2022-10-04 12:01:32.351037
 Success: True
 ErrorMessage: None
 
@@ -154,7 +154,7 @@ SIM/MOTION/DFT/SCF/MAX_SCF
 
 New: 20
 Previous: None
-Date: 2022-10-03 20:36:14.919511
+Date: 2022-10-04 12:01:32.351040
 Success: True
 ErrorMessage: None
 
@@ -162,7 +162,7 @@ SIM/MOTION/DFT/SCF/SCF_GUESS
 
 New: RESTART
 Previous: ATOMIC
-Date: 2022-10-03 20:36:14.919514
+Date: 2022-10-04 12:01:32.351042
 Success: True
 ErrorMessage: None
 
@@ -170,7 +170,7 @@ SIM/MOTION/DFT/SCF/OT/SECTION_PARAMETERS
 
 New: .TRUE.
 Previous: None
-Date: 2022-10-03 20:36:14.919517
+Date: 2022-10-04 12:01:32.351045
 Success: True
 ErrorMessage: None
 
@@ -178,7 +178,7 @@ SIM/MOTION/DFT/SCF/OT/PRECONDITIONER
 
 New: FULL_SINGLE_INVERSE
 Previous: None
-Date: 2022-10-03 20:36:14.919520
+Date: 2022-10-04 12:01:32.351048
 Success: True
 ErrorMessage: None
 
@@ -186,7 +186,7 @@ SIM/MOTION/DFT/SCF/OT/MINIMIZER
 
 New: DIIS
 Previous: None
-Date: 2022-10-03 20:36:14.919523
+Date: 2022-10-04 12:01:32.351051
 Success: True
 ErrorMessage: None
 
@@ -194,7 +194,7 @@ SIM/MOTION/DFT/SCF/OUTER_SCF/SECTION_PARAMETERS
 
 New: .TRUE.
 Previous: None
-Date: 2022-10-03 20:36:14.919526
+Date: 2022-10-04 12:01:32.351054
 Success: True
 ErrorMessage: None
 
@@ -202,7 +202,7 @@ SIM/MOTION/DFT/SCF/OUTER_SCF/MAX_SCF
 
 New: 10
 Previous: None
-Date: 2022-10-03 20:36:14.919528
+Date: 2022-10-04 12:01:32.351056
 Success: True
 ErrorMessage: None
 
@@ -210,7 +210,7 @@ SIM/MOTION/DFT/SCF/OUTER_SCF/EPS_SCF
 
 New: 1e-06
 Previous: 1e-06
-Date: 2022-10-03 20:36:14.919531
+Date: 2022-10-04 12:01:32.351059
 Success: True
 ErrorMessage: None
 
@@ -218,7 +218,7 @@ SIM/MOTION/DFT/SCF/SCF_PRINT/FORCES/SECTION_PARAMETERS
 
 New: OFF
 Previous: None
-Date: 2022-10-03 20:36:14.919534
+Date: 2022-10-04 12:01:32.351062
 Success: True
 ErrorMessage: None
 
@@ -226,7 +226,7 @@ SIM/MOTION/DFT/SCF/SCF_PRINT/DM_RESTART_WRITE
 
 New: .TRUE.
 Previous: None
-Date: 2022-10-03 20:36:14.919536
+Date: 2022-10-04 12:01:32.351065
 Success: True
 ErrorMessage: None
 
@@ -234,7 +234,7 @@ SIM/MOTION/DFT/XC/XC_FUNCTIONAL/SECTION_PARAMETERS
 
 New: PBE
 Previous: None
-Date: 2022-10-03 20:36:14.919540
+Date: 2022-10-04 12:01:32.351068
 Success: True
 ErrorMessage: None
 
@@ -242,7 +242,7 @@ SIM/MOTION/DFT/XC/VDW_POTENTIAL/POTENTIAL_TYPE
 
 New: PAIR_POTENTIAL
 Previous: None
-Date: 2022-10-03 20:36:14.919543
+Date: 2022-10-04 12:01:32.351071
 Success: True
 ErrorMessage: None
 
@@ -250,7 +250,7 @@ SIM/MOTION/DFT/XC/VDW_POTENTIAL/PAIR_POTENTIAL/TYPE
 
 New: DFTD3
 Previous: None
-Date: 2022-10-03 20:36:14.919546
+Date: 2022-10-04 12:01:32.351074
 Success: True
 ErrorMessage: None
 
@@ -258,7 +258,7 @@ SIM/MOTION/DFT/XC/VDW_POTENTIAL/PAIR_POTENTIAL/PARAMETER_FILE_NAME
 
 New: dftd3.dat
 Previous: None
-Date: 2022-10-03 20:36:14.919548
+Date: 2022-10-04 12:01:32.351077
 Success: True
 ErrorMessage: None
 
@@ -266,7 +266,7 @@ SIM/MOTION/DFT/XC/VDW_POTENTIAL/PAIR_POTENTIAL/REFERENCE_FUNCTIONAL
 
 New: PBE
 Previous: None
-Date: 2022-10-03 20:36:14.919550
+Date: 2022-10-04 12:01:32.351079
 Success: True
 ErrorMessage: None
 
@@ -274,7 +274,7 @@ SIM/MOTION/DFT/XC/VDW_POTENTIAL/PAIR_POTENTIAL/R_CUTOFF
 
 New: 12
 Previous: None
-Date: 2022-10-03 20:36:14.919552
+Date: 2022-10-04 12:01:32.351081
 Success: True
 ErrorMessage: None
 
@@ -282,7 +282,7 @@ SIM/MOTION/DFT/XC/VDW_POTENTIAL/PAIR_POTENTIAL/CALCULATE_C9_TERM
 
 New: .TRUE.
 Previous: None
-Date: 2022-10-03 20:36:14.919555
+Date: 2022-10-04 12:01:32.351083
 Success: True
 ErrorMessage: None
 
@@ -290,7 +290,7 @@ SIM/MOTION/DFT/XC/VDW_POTENTIAL/PAIR_POTENTIAL/REFERENCE_C9_TERM
 
 New: .TRUE.
 Previous: None
-Date: 2022-10-03 20:36:14.919558
+Date: 2022-10-04 12:01:32.351086
 Success: True
 ErrorMessage: None
 
@@ -298,7 +298,7 @@ SIM/MOTION/DFT/XC/VDW_POTENTIAL/PAIR_POTENTIAL/LONG_RANGE_CORRECTION
 
 New: .TRUE.
 Previous: None
-Date: 2022-10-03 20:36:14.919560
+Date: 2022-10-04 12:01:32.351089
 Success: True
 ErrorMessage: None
 
@@ -306,7 +306,7 @@ SIM/MOTION/DFT/XC/VDW_POTENTIAL/PAIR_POTENTIAL/EPS_CN
 
 New: 1e-06
 Previous: None
-Date: 2022-10-03 20:36:14.919563
+Date: 2022-10-04 12:01:32.351091
 Success: True
 ErrorMessage: None
 
@@ -314,7 +314,7 @@ SIM/MOTION/DFT/XC/THERMOSTAT/XC_DERIV
 
 New: SPLINE2
 Previous: None
-Date: 2022-10-03 20:36:14.919566
+Date: 2022-10-04 12:01:32.351094
 Success: True
 ErrorMessage: None
 
@@ -322,7 +322,7 @@ SIM/MOTION/DFT/XC/THERMOSTAT/XC_SMOOTH_RHO
 
 New: NONE
 Previous: None
-Date: 2022-10-03 20:36:14.919568
+Date: 2022-10-04 12:01:32.351097
 Success: True
 ErrorMessage: None
 
@@ -330,7 +330,7 @@ SIM/MOTION/SUBSYS/DFT/ABC
 
 New: 10.0 10.0 10.0
 Previous: None
-Date: 2022-10-03 20:36:14.919588
+Date: 2022-10-04 12:01:32.351112
 Success: True
 ErrorMessage: None
 
@@ -338,7 +338,7 @@ SIM/MOTION/SUBSYS/DFT/ALPHA_BETA_GAMMA
 
 New: 90.0 90.0 90.0
 Previous: None
-Date: 2022-10-03 20:36:14.919593
+Date: 2022-10-04 12:01:32.351118
 Success: True
 ErrorMessage: None
 
@@ -346,15 +346,15 @@ SIM/MOTION/SUBSYS/DFT/CELL_REF/ABC
 
 New: 10.0 10.0 10.0
 Previous: None
-Date: 2022-10-03 20:36:14.919599
+Date: 2022-10-04 12:01:32.351124
 Success: True
 ErrorMessage: None
 
 SIM/MOTION/SUBSYS/DFT/DEFAULT_KEYWORD
 
-New: NH3_NVT_GEMC_box2_initial.xyz
+New: water_NPT_GEMC_box2_initial.xyz
 Previous: None
-Date: 2022-10-03 20:36:14.919602
+Date: 2022-10-04 12:01:32.351127
 Success: True
 ErrorMessage: None
 
@@ -362,7 +362,7 @@ SIM/MOTION/SUBSYS/DFT/PERIODIC
 
 New: XYZ
 Previous: None
-Date: 2022-10-03 20:36:14.919605
+Date: 2022-10-04 12:01:32.351130
 Success: True
 ErrorMessage: None
 
@@ -370,7 +370,7 @@ SIM/MOTION/SUBSYS/DFT/SYMMETRY
 
 New: CUBIC
 Previous: None
-Date: 2022-10-03 20:36:14.919607
+Date: 2022-10-04 12:01:32.351132
 Success: True
 ErrorMessage: None
 
@@ -378,7 +378,7 @@ SIM/MOTION/SUBSYS/KIND/SECTION_PARAMETERS
 
 New: H
 Previous: None
-Date: 2022-10-03 20:36:14.919661
+Date: 2022-10-04 12:01:32.351191
 Success: True
 ErrorMessage: None
 
@@ -386,7 +386,15 @@ SIM/MOTION/SUBSYS/KIND/BASIS_SET
 
 New: DZVP-MOLOPT-GTH
 Previous: None
-Date: 2022-10-03 20:36:14.919665
+Date: 2022-10-04 12:01:32.351195
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/SUBSYS/KIND/ELEMENT
+
+New: H
+Previous: None
+Date: 2022-10-04 12:01:32.351198
 Success: True
 ErrorMessage: None
 
@@ -394,7 +402,71 @@ SIM/MOTION/SUBSYS/KIND/POTENTIAL
 
 New: GTH-PBE
 Previous: None
-Date: 2022-10-03 20:36:14.919669
+Date: 2022-10-04 12:01:32.351202
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/SUBSYS/KIND/SECTION_PARAMETERS
+
+New: HH
+Previous: None
+Date: 2022-10-04 12:01:32.351204
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/SUBSYS/KIND/BASIS_SET
+
+New: DZVP-MOLOPT-GTH
+Previous: None
+Date: 2022-10-04 12:01:32.351206
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/SUBSYS/KIND/ELEMENT
+
+New: H
+Previous: None
+Date: 2022-10-04 12:01:32.351208
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/SUBSYS/KIND/POTENTIAL
+
+New: GTH-PBE
+Previous: None
+Date: 2022-10-04 12:01:32.351211
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/SUBSYS/KIND/SECTION_PARAMETERS
+
+New: O
+Previous: None
+Date: 2022-10-04 12:01:32.351213
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/SUBSYS/KIND/BASIS_SET
+
+New: DZVP-MOLOPT-GTH
+Previous: None
+Date: 2022-10-04 12:01:32.351215
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/SUBSYS/KIND/ELEMENT
+
+New: O
+Previous: None
+Date: 2022-10-04 12:01:32.351217
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/SUBSYS/KIND/POTENTIAL
+
+New: GTH-PBE
+Previous: None
+Date: 2022-10-04 12:01:32.351219
 Success: True
 ErrorMessage: None
 
@@ -402,23 +474,7 @@ SIM/MOTION/SUBSYS/TOPOLOGY/CONN_FILE_FORMAT
 
 New: MOL_SET
 Previous: None
-Date: 2022-10-03 20:36:14.919672
-Success: True
-ErrorMessage: None
-
-SIM/MOTION/SUBSYS/TOPOLOGY/MOL_SET/MOLECULE/NMOL
-
-New: 1
-Previous: None
-Date: 2022-10-03 20:36:14.919689
-Success: True
-ErrorMessage: None
-
-SIM/MOTION/SUBSYS/TOPOLOGY/MOL_SET/MOLECULE/CONN_FILE_NAME
-
-New: hydrogen_bias.psf
-Previous: None
-Date: 2022-10-03 20:36:14.919692
+Date: 2022-10-04 12:01:32.351224
 Success: True
 ErrorMessage: None
 
@@ -426,7 +482,23 @@ SIM/MOTION/SUBSYS/TOPOLOGY/MOL_SET/MOLECULE/NMOL
 
 New: 2
 Previous: None
-Date: 2022-10-03 20:36:14.919695
+Date: 2022-10-04 12:01:32.351246
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/SUBSYS/TOPOLOGY/MOL_SET/MOLECULE/CONN_FILE_NAME
+
+New: water_bias.psf
+Previous: None
+Date: 2022-10-04 12:01:32.351249
+Success: True
+ErrorMessage: None
+
+SIM/MOTION/SUBSYS/TOPOLOGY/MOL_SET/MOLECULE/NMOL
+
+New: 2
+Previous: None
+Date: 2022-10-04 12:01:32.351252
 Success: True
 ErrorMessage: None
 
@@ -434,15 +506,15 @@ SIM/MOTION/SUBSYS/TOPOLOGY/MOL_SET/MOLECULE/CONN_FILE_NAME
 
 New: hydrogen_bias.psf
 Previous: None
-Date: 2022-10-03 20:36:14.919698
+Date: 2022-10-04 12:01:32.351254
 Success: True
 ErrorMessage: None
 
 SIM/MOTION/MC/ENSEMBLE
 
-New: GEMC_NVT
+New: GEMC_NPT
 Previous: None
-Date: 2022-10-03 20:36:14.919701
+Date: 2022-10-04 12:01:32.351257
 Success: True
 ErrorMessage: None
 
@@ -450,7 +522,7 @@ SIM/MOTION/MC/TEMPERATURE
 
 New: 298
 Previous: None
-Date: 2022-10-03 20:36:14.919704
+Date: 2022-10-04 12:01:32.351260
 Success: True
 ErrorMessage: None
 
@@ -458,7 +530,7 @@ SIM/MOTION/MC/PRESSURE
 
 New: 1.0
 Previous: None
-Date: 2022-10-03 20:36:14.919707
+Date: 2022-10-04 12:01:32.351263
 Success: True
 ErrorMessage: None
 
@@ -466,7 +538,7 @@ SIM/MOTION/MC/ETA
 
 New: 1
 Previous: None
-Date: 2022-10-03 20:36:14.919709
+Date: 2022-10-04 12:01:32.351266
 Success: True
 ErrorMessage: None
 
@@ -474,7 +546,7 @@ SIM/MOTION/MC/LBIAS
 
 New: TRUE
 Previous: None
-Date: 2022-10-03 20:36:14.919711
+Date: 2022-10-04 12:01:32.351268
 Success: True
 ErrorMessage: None
 
@@ -482,7 +554,7 @@ SIM/MOTION/MC/LSTOP
 
 New: FALSE
 Previous: None
-Date: 2022-10-03 20:36:14.919713
+Date: 2022-10-04 12:01:32.351270
 Success: True
 ErrorMessage: None
 
@@ -490,7 +562,7 @@ SIM/MOTION/MC/NMOVES
 
 New: 8
 Previous: None
-Date: 2022-10-03 20:36:14.919716
+Date: 2022-10-04 12:01:32.351272
 Success: True
 ErrorMessage: None
 
@@ -498,7 +570,7 @@ SIM/MOTION/MC/NSWAPMOVES
 
 New: 640
 Previous: None
-Date: 2022-10-03 20:36:14.919718
+Date: 2022-10-04 12:01:32.351274
 Success: True
 ErrorMessage: None
 
@@ -506,7 +578,7 @@ SIM/MOTION/MC/NSTEP
 
 New: 1000
 Previous: None
-Date: 2022-10-03 20:36:14.919720
+Date: 2022-10-04 12:01:32.351276
 Success: True
 ErrorMessage: None
 
@@ -514,15 +586,15 @@ SIM/MOTION/MC/RESTART
 
 New: FALSE
 Previous: None
-Date: 2022-10-03 20:36:14.919722
+Date: 2022-10-04 12:01:32.351279
 Success: True
 ErrorMessage: None
 
 SIM/MOTION/MC/BOX2_FILE_NAME
 
-New: GEMC_NVT_box1.inp
+New: GEMC_NPT_box1.inp
 Previous: None
-Date: 2022-10-03 20:36:14.919725
+Date: 2022-10-04 12:01:32.351282
 Success: True
 ErrorMessage: None
 
@@ -530,15 +602,15 @@ SIM/MOTION/MC/RESTART_FILE_NAME
 
 New: mc_restart_2
 Previous: None
-Date: 2022-10-03 20:36:14.919727
+Date: 2022-10-04 12:01:32.351284
 Success: True
 ErrorMessage: None
 
 SIM/MOTION/MC/ETA
 
-New: [0.0]
+New: [0.0, 0]
 Previous: None
-Date: 2022-10-03 20:36:14.919729
+Date: 2022-10-04 12:01:32.351290
 Success: True
 ErrorMessage: None
 
@@ -546,7 +618,7 @@ SIM/MOTION/MC/MOVE_PROBABILITIES/PMSWAP
 
 New: 0.4
 Previous: None
-Date: 2022-10-03 20:36:14.919733
+Date: 2022-10-04 12:01:32.351294
 Success: True
 ErrorMessage: None
 
@@ -554,7 +626,7 @@ SIM/MOTION/MC/MOVE_PROBABILITIES/PMTRAION
 
 New: 0.5
 Previous: None
-Date: 2022-10-03 20:36:14.919735
+Date: 2022-10-04 12:01:32.351297
 Success: True
 ErrorMessage: None
 
@@ -562,7 +634,7 @@ SIM/MOTION/MC/MOVE_PROBABILITIES/PMCLTRANS
 
 New: 0.0
 Previous: None
-Date: 2022-10-03 20:36:14.919738
+Date: 2022-10-04 12:01:32.351299
 Success: True
 ErrorMessage: None
 
@@ -570,7 +642,7 @@ SIM/MOTION/MC/MOVE_PROBABILITIES/PMTRANS
 
 New: 0.75
 Previous: None
-Date: 2022-10-03 20:36:14.919741
+Date: 2022-10-04 12:01:32.351301
 Success: True
 ErrorMessage: None
 
@@ -578,7 +650,7 @@ SIM/MOTION/MC/MOVE_PROBABILITIES/PMVOLUME
 
 New: 0.05
 Previous: None
-Date: 2022-10-03 20:36:14.919743
+Date: 2022-10-04 12:01:32.351303
 Success: True
 ErrorMessage: None
 
@@ -586,7 +658,7 @@ SIM/MOTION/MC/MOVE_PROBABILITIES/PMHMC
 
 New: 0
 Previous: None
-Date: 2022-10-03 20:36:14.919746
+Date: 2022-10-04 12:01:32.351306
 Success: True
 ErrorMessage: None
 
@@ -594,47 +666,47 @@ SIM/MOTION/MC/MOVE_PROBABILITIES/PMAVBMC
 
 New: 0
 Previous: None
-Date: 2022-10-03 20:36:14.919748
+Date: 2022-10-04 12:01:32.351308
 Success: True
 ErrorMessage: None
 
 SIM/MOTION/MC/MOVE_PROBABILITIES/MOL_PROBABILITIES/PMAVBMC_MOL
 
-New: [1]
+New: [1, 1]
 Previous: None
-Date: 2022-10-03 20:36:14.919753
+Date: 2022-10-04 12:01:32.351312
 Success: True
 ErrorMessage: None
 
 SIM/MOTION/MC/MOVE_PROBABILITIES/MOL_PROBABILITIES/PMSWAP_MOL
 
-New: [1]
+New: [1, 1]
 Previous: None
-Date: 2022-10-03 20:36:14.919756
+Date: 2022-10-04 12:01:32.351315
 Success: True
 ErrorMessage: None
 
 SIM/MOTION/MC/MOVE_PROBABILITIES/MOL_PROBABILITIES/PMTRAION_MOL
 
-New: [1]
+New: [1, 1]
 Previous: None
-Date: 2022-10-03 20:36:14.919759
+Date: 2022-10-04 12:01:32.351318
 Success: True
 ErrorMessage: None
 
 SIM/MOTION/MC/MOVE_PROBABILITIES/MOL_PROBABILITIES/PMTRANS_MOL
 
-New: [1]
+New: [1, 1]
 Previous: None
-Date: 2022-10-03 20:36:14.919762
+Date: 2022-10-04 12:01:32.351321
 Success: True
 ErrorMessage: None
 
 SIM/MOTION/MC/MOVE_PROBABILITIES/MOL_PROBABILITIES/PMROT_MOL
 
-New: [1]
+New: [1, 1]
 Previous: None
-Date: 2022-10-03 20:36:14.919764
+Date: 2022-10-04 12:01:32.351323
 Success: True
 ErrorMessage: None
 
@@ -642,7 +714,7 @@ SIM/MOTION/MC/MOVE_PROBABILITIES/BOX_PROBABILITIES/PMVOL_BOX
 
 New: 1.0
 Previous: None
-Date: 2022-10-03 20:36:14.919767
+Date: 2022-10-04 12:01:32.351326
 Success: True
 ErrorMessage: None
 
@@ -650,23 +722,23 @@ SIM/MOTION/MC/MOVE_PROBABILITIES/BOX_PROBABILITIES/PMHMC_BOX
 
 New: 1.0
 Previous: None
-Date: 2022-10-03 20:36:14.919770
+Date: 2022-10-04 12:01:32.351329
 Success: True
 ErrorMessage: None
 
 SIM/MOTION/MC/AVBMC/IUPTRANS
 
-New: 20
+New: 10
 Previous: None
-Date: 2022-10-03 20:36:14.919773
+Date: 2022-10-04 12:01:32.351331
 Success: True
 ErrorMessage: None
 
 SIM/MOTION/MC/AVBMC/IUPVOLUME
 
-New: 20
+New: 10
 Previous: None
-Date: 2022-10-03 20:36:14.919775
+Date: 2022-10-04 12:01:32.351334
 Success: True
 ErrorMessage: None
 
@@ -674,7 +746,7 @@ SIM/MOTION/MC/MAX_DISPLACEMENTS/MOL_DISPLACEMENTS/RMDIHEDRAL
 
 New: [3.0, 3.0]
 Previous: None
-Date: 2022-10-03 20:36:14.919780
+Date: 2022-10-04 12:01:32.351338
 Success: True
 ErrorMessage: None
 
@@ -682,7 +754,7 @@ SIM/MOTION/MC/MAX_DISPLACEMENTS/MOL_DISPLACEMENTS/RMANGLE
 
 New: [3.0, 3.0]
 Previous: None
-Date: 2022-10-03 20:36:14.919784
+Date: 2022-10-04 12:01:32.351341
 Success: True
 ErrorMessage: None
 
@@ -690,7 +762,7 @@ SIM/MOTION/MC/MAX_DISPLACEMENTS/MOL_DISPLACEMENTS/RMBOND
 
 New: [0.074, 0.074]
 Previous: None
-Date: 2022-10-03 20:36:14.919786
+Date: 2022-10-04 12:01:32.351344
 Success: True
 ErrorMessage: None
 
@@ -698,7 +770,7 @@ SIM/MOTION/MC/MAX_DISPLACEMENTS/MOL_DISPLACEMENTS/RMROT
 
 New: [26.0, 26.0]
 Previous: None
-Date: 2022-10-03 20:36:14.919789
+Date: 2022-10-04 12:01:32.351347
 Success: True
 ErrorMessage: None
 
@@ -706,7 +778,7 @@ SIM/MOTION/MC/MAX_DISPLACEMENTS/MOL_DISPLACEMENTS/RMTRANS
 
 New: [0.38, 0.38]
 Previous: None
-Date: 2022-10-03 20:36:14.919799
+Date: 2022-10-04 12:01:32.351350
 Success: True
 ErrorMessage: None
 
@@ -714,39 +786,39 @@ SIM/MOTION/MC/MAX_DISPLACEMENTS/THERMOSTAT/RMVOLUME
 
 New: 201.0
 Previous: None
-Date: 2022-10-03 20:36:14.919803
+Date: 2022-10-04 12:01:32.351353
 Success: True
 ErrorMessage: None
 
 SIM/MOTION/MC/AVBMC/AVBMC_ATOM
 
-New: [1]
+New: [1, 1]
 Previous: None
-Date: 2022-10-03 20:36:14.919806
+Date: 2022-10-04 12:01:32.351357
 Success: True
 ErrorMessage: None
 
 SIM/MOTION/MC/AVBMC/AVBMC_RMIN
 
-New: [1]
+New: [1, 1]
 Previous: None
-Date: 2022-10-03 20:36:14.919809
+Date: 2022-10-04 12:01:32.351360
 Success: True
 ErrorMessage: None
 
 SIM/MOTION/MC/AVBMC/AVBMC_RMAX
 
-New: [1]
+New: [1, 1]
 Previous: None
-Date: 2022-10-03 20:36:14.919812
+Date: 2022-10-04 12:01:32.351363
 Success: True
 ErrorMessage: None
 
 SIM/MOTION/MC/AVBMC/PBIAS
 
-New: [1]
+New: [1, 1]
 Previous: None
-Date: 2022-10-03 20:36:14.919815
+Date: 2022-10-04 12:01:32.351365
 Success: True
 ErrorMessage: None
 

@@ -1,0 +1,183 @@
+&FORCE_EVAL
+  METHOD        FIST
+  &MM        
+    &FORCEFIELD        
+      PARM_FILE_NAME        overall_charmm_bias.inp
+      PARMTYPE        CHM
+      &SPLINE        
+        EMAX_SPLINE        100000
+      &END SPLINE       
+      &CHARGE
+        ATOM O
+        CHARGE -0.4238
+      &END CHARGE
+      &CHARGE
+        ATOM H
+        CHARGE 0.2119
+      &END CHARGE
+      &CHARGE
+        ATOM HH
+        CHARGE 0.0000
+      &END CHARGE
+    &END FORCEFIELD        
+    &POISSON       
+      &EWALD        
+        EWALD_ACCURACY        1e-06
+        EWALD_TYPE        EWALD
+        GMAX        25
+      &END EWALD        
+    &END POISSON        
+  &END MM        
+  &DFT        
+    &MGRID        
+    &END MGRID        
+    &QS        
+    &END QS        
+    &POISSON        
+      &EWALD        
+      &END EWALD        
+    &END POISSON        
+    &PRINT         
+    &END PRINT        
+    &SCF        
+    &END SCF        
+    &XC        
+      &VDW_POTENTIAL        
+        &PAIR_POTENTIAL        
+        &END PAIR_POTENTIAL        
+      &END VDW_POTENTIAL        
+      &XC_GRID        
+      &END XC_GRID        
+    &END XC        
+  &END DFT        
+  &SUBSYS        
+    &CELL        
+      ABC       10 10 10
+      PERIODIC       XYZ
+      SYMMETRY       CUBIC
+    &END CELL        
+    &COORD        
+      @INCLUDE       bias_coord.xyz
+    &END COORD        
+    &KIND      H
+      BASIS_SET       DZVP-MOLOPT-GTH
+      ELEMENT       H
+      POTENTIAL       GTH-PBE
+    &END KIND
+    &KIND      HH
+      BASIS_SET       DZVP-MOLOPT-GTH
+      ELEMENT       H
+      POTENTIAL       GTH-PBE
+    &END KIND
+    &KIND      O
+      BASIS_SET       DZVP-MOLOPT-GTH
+      ELEMENT       O
+      POTENTIAL       GTH-PBE
+    &END KIND
+
+    &TOPOLOGY        
+      CONN_FILE_FORMAT       MOL_SET
+      &MOL_SET       
+        &MOLECULE       
+          CONN_FILE_NAME       water_bias.psf
+          NMOL       2
+        &END MOLECULE       
+        &MOLECULE       
+          CONN_FILE_NAME       hydrogen_bias.psf
+          NMOL       2
+        &END MOLECULE       
+      &END MOL_SET       
+    &END TOPOLOGY       
+  &END SUBSYS        
+&END FORCE_EVAL        
+&GLOBAL
+  RUN_TYPE     MC
+  PROJECT      bias_template
+  PRINT_LEVEL  LOW
+&END GLOBAL
+&MOTION
+  &MC
+    &AVBMC
+      AVBMC_ATOM        1 1
+      AVBMC_RMAX        1 1
+      AVBMC_RMIN        1 1
+      PBIAS        1 1
+    &END AVBMC
+    &MAX_DISPLACEMENTS
+      &BOX_DISPLACEMENTS
+        RMVOLUME        201.0
+      &END BOX_DISPLACEMENTS
+      &MOL_DISPLACEMENTS
+        RMANGLE        3.0 3.0
+        RMBOND        0.074 0.074
+        RMDIHEDRAL        3.0 3.0
+        RMROT        26.0 26.0
+        RMTRANS        0.38 0.38
+      &END MOL_DISPLACEMENTS
+    &END MAX_DISPLACEMENTS
+    &MOVE_PROBABILITIES
+      &BOX_PROBABILITIES
+        PMHMC_BOX        1.0
+        PMVOL_BOX        1.0
+      &END BOX_PROBABILITIES
+      &MOL_PROBABILITIES
+        PMAVBMC_MOL        1 1
+        PMROT_MOL        0.5 1
+        PMSWAP_MOL        0.75 1
+        PMTRAION_MOL        0.75 1
+        PMTRANS_MOL        0.5 1
+      &END MOL_PROBABILITIES
+      PMAVBMC        0
+      PMCLTRANS        0.0
+      PMHMC        0
+      PMSWAP        0.4
+      PMTRAION        0.6
+      PMTRANS        0.8
+      PMVOLUME        0.0125
+    &END MOVE_PROBABILITIES
+    &MOVE_UPDATES
+      IUPTRANS        10
+      IUPVOLUME        10
+    &END MOVE_UPDATES
+    BOX2_FILE_NAME        GEMC_NPT_box2.inp
+    ENSEMBLE        GEMC_NPT
+    ETA        0 0
+    IPRINT        1
+    LBIAS        TRUE
+    LSTOP        FALSE
+    NMOVES        8
+    NSTEP        2
+    NSWAPMOVES        640
+    PRESSURE        18000.0
+    RESTART        FALSE
+    RESTART_FILE_NAME        mc_restart_1
+    TEMPERATURE        298
+  &END MC
+  &MD
+    &THERMOSTAT
+    &END THERMOSTAT
+    &AVERAGES
+    &END AVERAGES
+    &PRINT
+      &ENERGY
+        &EACH
+        &END EACH
+      &END ENERGY
+      &PROGRAM_RUN_INFO
+        &EACH
+        &END EACH
+      &END PROGRAM_RUN_INFO
+    &END PRINT
+  &END MD
+
+  &CONSTRAINT
+    &FIXED_ATOMS
+    &END FIXED_ATOMS
+  &END CONSTRAINT
+
+  &PRINT
+  &END PRINT
+  &GEO_OPT
+  &END GEO_OPT
+&END MOTION
+

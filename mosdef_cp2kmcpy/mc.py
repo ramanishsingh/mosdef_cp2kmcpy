@@ -41,6 +41,10 @@ class MC():
     :type periodiicity: string, optional, defaults to 'XYZ'
     :param n_steps: Number of Monte Carlo cycles
     :type  n_steps: int
+    :param iuptrans: Number of Monte Carlo cycles after max displacement for translation moves is updated
+    :type  iuptrans: int
+    :param iupvolume: Number of Monte Carlo cycles after max displacement for volume moves is updated
+    :type  iupvolume: int
     :param n_ff_moves: Number of force-field-based moves between first-principles steps
     :type  n_ff_moves: int, optional, deault value is 8
     :param nswapmoves: Number insertions to try during each swap move
@@ -83,7 +87,7 @@ class MC():
                  initial_coordinate_filename=None,use_atom_name_as_symbol=True,cutoff=None,
                  scf_tolerance=None, basis_set=None,basis_set_filename=None, potential_filename=None,
                  functional=None,
-                 periodicity=None,n_steps=None,n_ff_moves=None, nswapmoves=None,ensemble=None,project_name=None,
+                 periodicity=None,n_steps=None,iuptrans = None, iupvolume = None, n_ff_moves=None, nswapmoves=None,ensemble=None,project_name=None,
                  temperature=None,pressure=None,traj_type=None,
                  traj_freq=None,seed=None,input_filename=None,output_filename=None,move_probabilities=None,
                  mol_probabilities=None,avbmc_probabilities=None, run_type='equilibration',restart=False,restart_filename=None,
@@ -104,6 +108,8 @@ class MC():
         self.functional=functional
         self.periodicity=periodicity
         self.n_steps=n_steps
+        self.iuptrans = iuptrans
+        self.iupvolume = iupvolume
         self.n_ff_moves=n_ff_moves
         self.nswapmoves=nswapmoves
         self.ensemble=ensemble
@@ -141,6 +147,8 @@ class MC():
         functional=self.functional
         periodicity=self.periodicity
         n_steps=self.n_steps
+        iuptrans = self.iuptrans
+        iupvolume = self.iupvolume
         n_ff_moves=self.n_ff_moves
         nswapmoves=self.nswapmoves
         ensemble=self.ensemble
@@ -183,6 +191,12 @@ class MC():
         if n_steps==None:
             self.n_steps=1000
             print('n_steps not specified, set as 1000')
+        if iuptrans == None:
+            self.iuptrans = 10
+            print('iuptrans not specified, set as 10')
+        if iupvolume == None:
+            self.iupvolume = 10
+            print('iupvolume not specified, set as 10')
         if n_ff_moves==None:
             self.n_ff_moves=8
             print('n_ff_moves not specified, set as 8')

@@ -1,0 +1,16 @@
+<ForceField>
+ <AtomTypes>
+  <Type name="o_spce" class="ow" element="O" mass="15.999" def="[O;X2](H)(H)" desc="fake water oxygen" doi="10.1063/1.5025184"/>
+  <Type name="h_spce" class="hw" element="H" mass="1.008"  def="H[O;X2](H)" desc="fake water hydrogen" doi="10.1063/1.5025184"/>
+ </AtomTypes>
+ <HarmonicBondForce>
+  <Bond class1="ow" class2="hw" length="0.09572" k="376560"/>
+  </HarmonicBondForce>
+ <HarmonicAngleForce>
+  <Angle class1="hw" class2="ow" class3="hw" angle="1.8242" k="460.24"/>
+ </HarmonicAngleForce>
+ <NonbondedForce coulomb14scale="1" lj14scale="1">
+  <Atom type="o_spce" charge="-0.4238" sigma="0.31507" epsilon="0.63627"/>
+  <Atom type="h_spce" charge="0.2119"  sigma="0.04"    epsilon="0.19238"/>
+  </NonbondedForce>
+</ForceField>
